@@ -1,0 +1,2174 @@
+{
+  
+  "skills": {
+
+    "================ MEDICAL, NURSING & HEALTHCARE ================": {},
+
+    "Critical Care Nursing": {
+      "canonical_name": "Critical Care Nursing",
+      "category": "Healthcare & Nursing",
+      "aliases": [
+        "ICU Nursing",
+        "Intensive Care Unit Nurse",
+        "CCU Nurse",
+        "Ventilator Management Nursing",
+        "Post-Operative ICU Care"
+      ],
+      "distinct_variants": [
+        "Emergency Room (ER) Nursing",
+        "Neonatal Intensive Care (NICU)"
+      ]
+    },
+    "Patient Triage": {
+      "canonical_name": "Patient Triage",
+      "category": "Medical Operations",
+      "aliases": [
+        "ER Triage",
+        "Emergency Assessment",
+        "Patient Acuity Rating",
+        "Casualty Screening"
+      ],
+      "distinct_variants": [
+        "Outpatient Department (OPD) Consultation",
+        "Medical Coding"
+      ]
+    },
+    "Infection Control & Prevention": {
+      "canonical_name": "Infection Control & Prevention",
+      "category": "Healthcare Quality & Safety",
+      "aliases": [
+        "IPC Protocol",
+        "Hospital Infection Control",
+        "Sterilization Management",
+        "Biohazard Safety Compliance"
+      ],
+      "distinct_variants": [
+        "Biomedical Waste Management",
+        "Environmental Health and Safety (EHS)"
+      ]
+    },
+    "Hospital Administration": {
+      "canonical_name": "Hospital Administration",
+      "category": "Healthcare Management",
+      "aliases": [
+        "Medical Operations Management",
+        "Healthcare Operations",
+        "Hospital Desk Management",
+        "Clinical Service Management"
+      ],
+      "distinct_variants": [
+        "Medical Billing",
+        "Health Information Management"
+      ]
+    },
+    "Dispensing Pharmacy": {
+      "canonical_name": "Dispensing Pharmacy",
+      "category": "Pharmacy Practice",
+      "aliases": [
+        "Retail Pharmacy Management",
+        "Medication Dispensing",
+        "Prescription Checking",
+        "Drug Inventory Control",
+        "Hospital Pharmacy Dispensing"
+      ],
+      "distinct_variants": [
+        "Clinical Pharmacy",
+        "Industrial Pharmaceutical Quality Control"
+      ]
+    },
+
+    "================ HUMAN RESOURCES & PEOPLE MANAGEMENT ================": {},
+
+    "Payroll Administration": {
+      "canonical_name": "Payroll Administration",
+      "category": "Human Resources",
+      "aliases": [
+        "Payroll Processing",
+        "Salary Disbursement",
+        "EOBI & PESSI Management",
+        "Gratuity & Provident Fund Calculation",
+        "WHT on Salary Deduction"
+      ],
+      "distinct_variants": [
+        "Compensation and Benefits Design",
+        "HR Operations"
+      ]
+    },
+    "Talent Acquisition": {
+      "canonical_name": "Talent Acquisition",
+      "category": "Human Resources",
+      "aliases": [
+        "Recruitment",
+        "Headhunting",
+        "Technical Sourcing",
+        "Candidate Screening",
+        "Talent Sourcing",
+        "HR Sourcing Specialist"
+      ],
+      "distinct_variants": [
+        "Employer Branding",
+        "Onboarding & Offboarding"
+      ]
+    },
+    "Labor Law Compliance": {
+      "canonical_name": "Labor Law Compliance",
+      "category": "Human Resources & Legal",
+      "aliases": [
+        "Pakistan Labor Laws Compliance",
+        "Factory Act Compliance",
+        "Industrial Relations (IR)",
+        "Workplace Disciplinary Hearings"
+      ],
+      "distinct_variants": [
+        "Corporate Legal Affairs",
+        "Contract Negotiation"
+      ]
+    },
+
+    "================ SUPPLY CHAIN, LOGISTICS & PROCUREMENT ================": {},
+
+    "Customs Clearance & Import/Export": {
+      "canonical_name": "Customs Clearance & Import/Export",
+      "category": "Supply Chain & Logistics",
+      "aliases": [
+        "Customs Documentation",
+        "WeBOC Operations",
+        "Import Logistics",
+        "Export Documentation",
+        "Bill of Lading (BL) Handling",
+        "Freight Forwarding Setup"
+      ],
+      "distinct_variants": [
+        "Local Purchasing",
+        "Fleet Management"
+      ]
+    },
+    "Procurement Management": {
+      "canonical_name": "Procurement Management",
+      "category": "Supply Chain & Logistics",
+      "aliases": [
+        "Purchasing",
+        "Vendor Sourcing",
+        "Procurement Sourcing",
+        "RFQs & Tender Bidding",
+        "Supplier Negotiation"
+      ],
+      "distinct_variants": [
+        "Inventory Management",
+        "Category Management"
+      ]
+    },
+    "Warehouse & Inventory Management": {
+      "canonical_name": "Warehouse & Inventory Management",
+      "category": "Supply Chain & Logistics",
+      "aliases": [
+        "Stock Control",
+        "Inventory Reconciliation",
+        "Warehouse Operations",
+        "Goods Received Note (GRN) Verification",
+        "FIFO/LIFO Management"
+      ],
+      "distinct_variants": [
+        "Demand Forecasting",
+        "Production Planning"
+      ]
+    },
+
+    "================ BUSINESS MANAGEMENT & STRATEGY ================": {},
+
+    "Project Management": {
+      "canonical_name": "Project Management",
+      "category": "Business Management",
+      "aliases": [
+        "Project Coordination",
+        "Project Delivery",
+        "Agile Project Management",
+        "Scrum Execution",
+        "Scope and Schedule Tracking"
+      ],
+      "distinct_variants": [
+        "Product Management",
+        "Program Management",
+        "Business Analysis"
+      ]
+    },
+    "Business Development": {
+      "canonical_name": "Business Development",
+      "category": "Business Strategy",
+      "aliases": [
+        "BD",
+        "B2B Sales Growth",
+        "Client Acquisition",
+        "Corporate Partnerships",
+        "Strategic Partnerships"
+      ],
+      "distinct_variants": [
+        "Retail Sales",
+        "Key Account Management"
+      ]
+    },
+    "Operations Management": {
+      "canonical_name": "Operations Management",
+      "category": "Business Management",
+      "aliases": [
+        "Business Operations",
+        "COO Function",
+        "Operational Excellence",
+        "Process Optimization",
+        "SOP Development"
+      ],
+      "distinct_variants": [
+        "Quality Assurance Operations",
+        "Supply Chain Operations"
+      ]
+    },
+
+    "================ SALES & CLIENT MANAGEMENT ================": {},
+
+    "B2B Lead Generation": {
+      "canonical_name": "B2B Lead Generation",
+      "category": "Sales & Business Development",
+      "aliases": [
+        "Cold Prospecting",
+        "Outbound Sales Prospecting",
+        "LinkedIn Sales Navigator Sourcing",
+        "Appointment Setting",
+        "Cold Email Outreach"
+      ],
+      "distinct_variants": [
+        "Inbound Customer Support",
+        "Field Sales"
+      ]
+    },
+    "Key Account Management": {
+      "canonical_name": "Key Account Management",
+      "category": "Sales & Client Management",
+      "aliases": [
+        "Client Relationship Management",
+        "Account Executive",
+        "Client Success Management",
+        "Key Client Retainership"
+      ],
+      "distinct_variants": [
+        "New Business Acquisition",
+        "Customer Service Desk"
+      ]
+    },
+
+    "React.js": {
+      "canonical_name": "React.js",
+      "category": "Software Engineering",
+      "aliases": [
+        "React",
+        "ReactJS",
+        "React JS",
+        "React Frontend",
+        "React Web Development"
+      ],
+      "distinct_variants": [
+        "React Native",
+        "Next.js",
+        "Vue.js"
+      ]
+    },
+    "React Native": {
+      "canonical_name": "React Native",
+      "category": "Software Engineering",
+      "aliases": [
+        "RN",
+        "React-Native",
+        "React Native Mobile Developer",
+        "React Cross Platform App Dev"
+      ],
+      "distinct_variants": [
+        "React.js",
+        "Flutter",
+        "Swift"
+      ]
+    },
+    "Node.js": {
+      "canonical_name": "Node.js",
+      "category": "Software Engineering",
+      "aliases": [
+        "Node",
+        "NodeJS",
+        "Node JS",
+        "Express.js",
+        "Node Backend"
+      ],
+      "distinct_variants": [
+        "NestJS",
+        "Deno",
+        "Bun"
+      ]
+    },
+    "MERN Stack": {
+      "canonical_name": "MERN Stack",
+      "category": "Software Engineering",
+      "aliases": [
+        "MERN Developer",
+        "MongoDB Express React Node",
+        "Fullstack JS",
+        "MERN Fullstack"
+      ],
+      "distinct_variants": [
+        "MEAN Stack",
+        "LAMP Stack",
+        "PERN Stack"
+      ]
+    },
+    "Laravel": {
+      "canonical_name": "Laravel",
+      "category": "Software Engineering",
+      "aliases": [
+        "Laravel PHP",
+        "Laravel Framework",
+        "PHP Laravel",
+        "PHP Developer (Laravel Focus)"
+      ],
+      "distinct_variants": [
+        "CodeIgniter",
+        "Symfony",
+        "Yii Framework"
+      ]
+    },
+    "WordPress Development": {
+      "canonical_name": "WordPress Development",
+      "category": "Software Engineering",
+      "aliases": [
+        "WP Developer",
+        "WordPress Customization",
+        "WP Theme Development",
+        "WooCommerce Development",
+        "WordPress Plugin Developer"
+      ],
+      "distinct_variants": [
+        "Shopify Development",
+        "Wix",
+        "Webflow"
+      ]
+    },
+    "Flutter": {
+      "canonical_name": "Flutter",
+      "category": "Software Engineering",
+      "aliases": [
+        "Flutter SDK",
+        "Dart Flutter",
+        "Flutter App Developer",
+        "Cross Platform Flutter"
+      ],
+      "distinct_variants": [
+        "React Native",
+        "Native Android (Kotlin)",
+        "Native iOS (Swift)"
+      ]
+    },
+    "DevOps Engineering": {
+      "canonical_name": "DevOps Engineering",
+      "category": "Infrastructure & Cloud",
+      "aliases": [
+        "DevOps",
+        "Build and Release Engineer",
+        "CI/CD Pipeline Engineer",
+        "Site Reliability Engineering (SRE)"
+      ],
+      "distinct_variants": [
+        "System Administration",
+        "Cloud Architecture"
+      ]
+    },
+
+    "================ ACCOUNTING, FINANCE & TAXATION (PK MARKET) ================": {},
+
+    "FBR Tax Compliance": {
+      "canonical_name": "FBR Tax Compliance",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "FBR Filing",
+        "IRIS Portal Management",
+        "Income Tax Return Filing",
+        "FBR E-Filing",
+        "Federal Board of Revenue Compliance",
+        "Withholding Tax Filing (WHT)"
+      ],
+      "distinct_variants": [
+        "Provincial Sales Tax Compliance",
+        "Corporate Law Compliance"
+      ]
+    },
+    "Provincial Sales Tax Compliance": {
+      "canonical_name": "Provincial Sales Tax Compliance",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "SRB Filing",
+        "PRA Filing",
+        "KPRA Filing",
+        "BRA Filing",
+        "Provincial Revenue Authority Tax",
+        "Sales Tax on Services"
+      ],
+      "distinct_variants": [
+        "FBR Tax Compliance",
+        "Customs Duty Compliance"
+      ]
+    },
+    "QuickBooks": {
+      "canonical_name": "QuickBooks",
+      "category": "Financial Software",
+      "aliases": [
+        "QuickBooks Online (QBO)",
+        "QuickBooks Desktop",
+        "Intuit QuickBooks",
+        "QB Bookkeeping"
+      ],
+      "distinct_variants": [
+        "Peachtree",
+        "Xero",
+        "Tally Prime"
+      ]
+    },
+    "Peachtree": {
+      "canonical_name": "Peachtree",
+      "category": "Financial Software",
+      "aliases": [
+        "Sage 50",
+        "Peachtree Accounting",
+        "Sage Peachtree"
+      ],
+      "distinct_variants": [
+        "QuickBooks",
+        "Tally"
+      ]
+    },
+    "Financial Auditing": {
+      "canonical_name": "Financial Auditing",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "Internal Audit",
+        "External Audit",
+        "Statutory Audit",
+        "Audit & Assurance",
+        "Financial Statement Reconciliation"
+      ],
+      "distinct_variants": [
+        "Forensic Accounting",
+        "Cost Auditing"
+      ]
+    },
+    "Cost Accounting": {
+      "canonical_name": "Cost Accounting",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "Product Costing",
+        "Costing & Budgeting",
+        "Manufacturing Cost Accounting",
+        "Standard Costing"
+      ],
+      "distinct_variants": [
+        "Financial Accounting",
+        "Management Accounting"
+      ]
+    },
+    "Bookkeeping": {
+      "canonical_name": "Bookkeeping",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "Book Keeping",
+        "General Ledger Maintenance",
+        "Journal Entries",
+        "Double Entry Bookkeeping"
+      ],
+      "distinct_variants": [
+        "Cost Accounting",
+        "Payroll Administration"
+      ]
+    },
+    "Financial Reporting": {
+      "canonical_name": "Financial Reporting",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "Financial Statements Preparation",
+        "Financial Statement Drafting",
+        "IFRS Reporting",
+        "Annual Report Preparation"
+      ],
+      "distinct_variants": [
+        "Financial Auditing",
+        "Cost Accounting"
+      ]
+    },
+    "Financial Modeling": {
+      "canonical_name": "Financial Modeling",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "Financial Model Building",
+        "Valuation Modeling",
+        "DCF Modeling",
+        "Excel Financial Modeling"
+      ],
+      "distinct_variants": [
+        "Financial Reporting",
+        "Cost Accounting"
+      ]
+    },
+    "Budgeting & Forecasting": {
+      "canonical_name": "Budgeting & Forecasting",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "Budget Planning",
+        "Annual Budgeting",
+        "Variance Analysis",
+        "Cash Flow Forecasting"
+      ],
+      "distinct_variants": [
+        "Financial Modeling",
+        "Cost Accounting"
+      ]
+    },
+    "Accounts Payable & Receivable": {
+      "canonical_name": "Accounts Payable & Receivable",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "AP/AR Management",
+        "Accounts Reconciliation",
+        "Vendor Payments Processing",
+        "Invoice Processing"
+      ],
+      "distinct_variants": [
+        "Bookkeeping",
+        "Payroll Administration"
+      ]
+    },
+    "Advanced Excel for Finance": {
+      "canonical_name": "Advanced Excel for Finance",
+      "category": "Accounting & Finance",
+      "aliases": [
+        "MS Excel",
+        "Excel",
+        "Pivot Tables & VLOOKUP",
+        "Excel Financial Analysis"
+      ],
+      "distinct_variants": []
+    },
+
+    "================ ENGINEERING & CONSTRUCTION ================": {},
+
+    "AutoCAD": {
+      "canonical_name": "AutoCAD",
+      "category": "Engineering & Design",
+      "aliases": [
+        "Auto CAD",
+        "CAD Drafting",
+        "2D CAD",
+        "AutoCAD 2D/3D"
+      ],
+      "distinct_variants": [
+        "AutoCAD Civil 3D",
+        "SolidWorks",
+        "Revit"
+      ]
+    },
+    "AutoCAD Civil 3D": {
+      "canonical_name": "AutoCAD Civil 3D",
+      "category": "Engineering & Design",
+      "aliases": [
+        "Civil 3D",
+        "3D Highway Design Software",
+        "Infrastructure CAD"
+      ],
+      "distinct_variants": [
+        "AutoCAD",
+        "Primavera P6"
+      ]
+    },
+    "Quantity Surveying": {
+      "canonical_name": "Quantity Surveying",
+      "category": "Civil Engineering",
+      "aliases": [
+        "QS",
+        "Bill of Quantities (BOQ) Preparation",
+        "Quantity Estimation",
+        "Construction Material Takeoff",
+        "Interim Payment Certificates (IPC)"
+      ],
+      "distinct_variants": [
+        "Land Surveying",
+        "Construction Site Supervision"
+      ]
+    },
+    "Primavera P6": {
+      "canonical_name": "Primavera P6",
+      "category": "Project Management Software",
+      "aliases": [
+        "Primavera",
+        "P6 Project Management",
+        "Oracle Primavera"
+      ],
+      "distinct_variants": [
+        "MS Project",
+        "Jira"
+      ]
+    },
+    "Construction Site Supervision": {
+      "canonical_name": "Construction Site Supervision",
+      "category": "Civil Engineering",
+      "aliases": [
+        "Site Engineer",
+        "Site Supervision",
+        "Civil Works Supervision",
+        "On-Site Quality Control"
+      ],
+      "distinct_variants": [
+        "Project Management",
+        "Structural Health Monitoring"
+      ]
+    },
+
+    "================ TEXTILE & MANUFACTURING ================": {},
+
+    "Garment Merchandising": {
+      "canonical_name": "Garment Merchandising",
+      "category": "Textile Industry",
+      "aliases": [
+        "Textile Merchandising",
+        "Apparel Merchandiser",
+        "Apparel Merchandising",
+        "Order Follow-up (Textile)",
+        "TNA Execution (Time and Action)"
+      ],
+      "distinct_variants": [
+        "Retail Merchandising",
+        "Fashion Designing"
+      ]
+    },
+    "Textile Quality Assurance": {
+      "canonical_name": "Textile Quality Assurance",
+      "category": "Textile Industry",
+      "aliases": [
+        "Textile QA/QC",
+        "AQL Standard Inspection",
+        "Fabric Quality Inspection",
+        "Knitting/Weaving Quality Control",
+        "Finished Garment Inspection"
+      ],
+      "distinct_variants": [
+        "Textile Processing",
+        "ISO Quality Auditing"
+      ]
+    },
+    "Textile Dyeing and Printing": {
+      "canonical_name": "Textile Dyeing and Printing",
+      "category": "Textile Industry",
+      "aliases": [
+        "Wet Processing",
+        "Textile Color Matching",
+        "Rotary Printing",
+        "Digital Fabric Printing",
+        "Dyeing Master"
+      ],
+      "distinct_variants": [
+        "Screen Printing (Manual)",
+        "Garment Washing"
+      ]
+    },
+    "Fashion Pattern Making": {
+      "canonical_name": "Fashion Pattern Making",
+      "category": "Textile & Apparel",
+      "aliases": [
+        "Garment Pattern Making",
+        "CAD Pattern Making",
+        "Gerber CAD",
+        "Lectra System",
+        "Master Pattern Maker"
+      ],
+      "distinct_variants": [
+        "Fashion Illustration",
+        "Apparel Tailoring"
+      ]
+    },
+
+    "================ DIGITAL MARKETING & SALES ================": {},
+
+    "Search Engine Optimization": {
+      "canonical_name": "Search Engine Optimization",
+      "category": "Digital Marketing",
+      "aliases": [
+        "SEO",
+        "On-Page SEO",
+        "Off-Page SEO",
+        "Technical SEO",
+        "Organic Traffic Growth"
+      ],
+      "distinct_variants": [
+        "Search Engine Marketing (SEM)",
+        "Social Media Optimization (SMO)"
+      ]
+    },
+    "Performance Marketing": {
+      "canonical_name": "Performance Marketing",
+      "category": "Digital Marketing",
+      "aliases": [
+        "Meta Ads",
+        "Facebook & Instagram Ads",
+        "Paid Ads Specialist",
+        "PPC Marketing",
+        "Google Ads Specialist"
+      ],
+      "distinct_variants": [
+        "Organic Social Media Management",
+        "SEO"
+      ]
+    },
+    "Amazon Virtual Assistant": {
+      "canonical_name": "Amazon Virtual Assistant",
+      "category": "E-Commerce",
+      "aliases": [
+        "Amazon VA",
+        "Amazon FBA Specialist",
+        "Amazon Wholesale VA",
+        "Amazon Private Label Specialist",
+        "Helium 10 / Jungle Scout Operator"
+      ],
+      "distinct_variants": [
+        "Shopify Store Manager",
+        "eBay Assistant"
+      ]
+    },
+    "================ DATA, AI & ANALYTICS ================": {},
+
+    "Data Analysis": {
+      "canonical_name": "Data Analysis",
+      "category": "Data & Analytics",
+      "aliases": [
+        "Data Analytics",
+        "Business Data Analysis",
+        "Excel Data Analysis",
+        "Reporting & Dashboards"
+      ],
+      "distinct_variants": [
+        "Data Science",
+        "Business Intelligence",
+        "Data Engineering"
+      ]
+    },
+    "Business Intelligence": {
+      "canonical_name": "Business Intelligence",
+      "category": "Data & Analytics",
+      "aliases": [
+        "BI",
+        "BI Developer",
+        "Power BI Development",
+        "Tableau Development",
+        "BI Reporting"
+      ],
+      "distinct_variants": [
+        "Data Analysis",
+        "Data Engineering"
+      ]
+    },
+    "Data Engineering": {
+      "canonical_name": "Data Engineering",
+      "category": "Data & Analytics",
+      "aliases": [
+        "ETL Development",
+        "Data Pipeline Engineering",
+        "Big Data Engineering"
+      ],
+      "distinct_variants": [
+        "Data Analysis",
+        "Database Administration"
+      ]
+    },
+    "Machine Learning": {
+      "canonical_name": "Machine Learning",
+      "category": "Data & Analytics",
+      "aliases": [
+        "ML",
+        "ML Engineering",
+        "Applied Machine Learning",
+        "Predictive Modeling"
+      ],
+      "distinct_variants": [
+        "Deep Learning",
+        "Natural Language Processing (NLP)",
+        "Computer Vision"
+      ]
+    },
+    "Deep Learning": {
+      "canonical_name": "Deep Learning",
+      "category": "Data & Analytics",
+      "aliases": [
+        "DL",
+        "Neural Networks",
+        "Deep Neural Network Engineering"
+      ],
+      "distinct_variants": [
+        "Machine Learning",
+        "Computer Vision",
+        "Natural Language Processing (NLP)"
+      ]
+    },
+    "Database Administration": {
+      "canonical_name": "Database Administration",
+      "category": "Data & IT Infrastructure",
+      "aliases": [
+        "DBA",
+        "SQL Server Administration",
+        "MySQL Administration",
+        "Database Management"
+      ],
+      "distinct_variants": [
+        "Data Engineering",
+        "System Administration"
+      ]
+    },
+
+    "================ IT INFRASTRUCTURE & NETWORKING ================": {},
+
+    "System Administration": {
+      "canonical_name": "System Administration",
+      "category": "IT Infrastructure",
+      "aliases": [
+        "SysAdmin",
+        "Windows Server Administration",
+        "Linux System Administration",
+        "IT Support Administration"
+      ],
+      "distinct_variants": [
+        "Network Administration",
+        "DevOps Engineering"
+      ]
+    },
+    "Network Administration": {
+      "canonical_name": "Network Administration",
+      "category": "IT Infrastructure",
+      "aliases": [
+        "Network Engineer",
+        "CCNA Networking",
+        "LAN/WAN Administration",
+        "Network Security Administration"
+      ],
+      "distinct_variants": [
+        "System Administration",
+        "Cybersecurity"
+      ]
+    },
+    "Cybersecurity": {
+      "canonical_name": "Cybersecurity",
+      "category": "IT Security",
+      "aliases": [
+        "Information Security",
+        "InfoSec",
+        "Penetration Testing",
+        "SOC Analyst",
+        "Vulnerability Assessment"
+      ],
+      "distinct_variants": [
+        "Network Administration",
+        "Compliance & Risk Management"
+      ]
+    },
+    "IT Helpdesk Support": {
+      "canonical_name": "IT Helpdesk Support",
+      "category": "IT Support",
+      "aliases": [
+        "Technical Support",
+        "Desktop Support",
+        "IT Support Executive",
+        "Tier 1 Support"
+      ],
+      "distinct_variants": [
+        "System Administration",
+        "Network Administration"
+      ]
+    },
+
+    "================ BANKING & FINANCIAL SERVICES ================": {},
+
+    "Retail Banking Operations": {
+      "canonical_name": "Retail Banking Operations",
+      "category": "Banking & Financial Services",
+      "aliases": [
+        "Branch Banking",
+        "Teller Operations",
+        "Branch Operations Officer",
+        "Customer Services Officer "
+      ],
+      "distinct_variants": [
+        "Credit & Risk Analysis",
+        "Trade Finance"
+      ]
+    },
+    "Credit & Risk Analysis": {
+      "canonical_name": "Credit & Risk Analysis",
+      "category": "Banking & Financial Services",
+      "aliases": [
+        "Credit Analyst",
+        "Credit Risk Management",
+        "Loan Underwriting",
+        "Risk Management (Banking)"
+      ],
+      "distinct_variants": [
+        "Retail Banking Operations",
+        "Compliance & Risk Management"
+      ]
+    },
+    "Trade Finance": {
+      "canonical_name": "Trade Finance",
+      "category": "Banking & Financial Services",
+      "aliases": [
+        "Letters of Credit Processing",
+        "Trade Operations",
+        "Import/Export Finance"
+      ],
+      "distinct_variants": [
+        "Customs Clearance & Import/Export",
+        "Retail Banking Operations"
+      ]
+    },
+    "Compliance & Risk Management": {
+      "canonical_name": "Compliance & Risk Management",
+      "category": "Banking & Legal",
+      "aliases": [
+        "AML Compliance",
+        "KYC Verification",
+        "Regulatory Compliance",
+        "State Bank of Pakistan Compliance"
+      ],
+      "distinct_variants": [
+        "Credit & Risk Analysis",
+        "Cybersecurity"
+      ]
+    },
+
+    "================ TELECOM ================": {},
+
+    "Telecom Network Operations": {
+      "canonical_name": "Telecom Network Operations",
+      "category": "Telecommunications",
+      "aliases": [
+        "NOC Engineer",
+        "RF Engineering",
+        "BTS Maintenance",
+        "Telecom Infrastructure Management"
+      ],
+      "distinct_variants": [
+        "Network Administration",
+        "Customer Service (Telecom)"
+      ]
+    },
+    "Customer Service (Telecom)": {
+      "canonical_name": "Customer Service (Telecom)",
+      "category": "Telecommunications",
+      "aliases": [
+        "Call Center Representative",
+        "Telecom Customer Support",
+        "Franchise Operations (Telecom)"
+      ],
+      "distinct_variants": [
+        "Telecom Network Operations",
+        "BPO Customer Support"
+      ]
+    },
+
+    "================ BPO / CUSTOMER SERVICE ================": {},
+
+    "BPO Customer Support": {
+      "canonical_name": "BPO Customer Support",
+      "category": "Customer Service",
+      "aliases": [
+        "Call Center Agent",
+        "Customer Service Representative",
+        "CSR",
+        "Inbound/Outbound Call Handling",
+        "Chat Support Agent"
+      ],
+      "distinct_variants": [
+        "Key Account Management",
+        "Technical Support"
+      ]
+    },
+    "Technical Support": {
+      "canonical_name": "Technical Support",
+      "category": "Customer Service",
+      "aliases": [
+        "Tech Support Representative",
+        "Technical Helpdesk",
+        "Product Support Specialist"
+      ],
+      "distinct_variants": [
+        "IT Helpdesk Support",
+        "BPO Customer Support"
+      ]
+    },
+
+    "================ EDUCATION & TEACHING ================": {},
+
+    "Classroom Teaching": {
+      "canonical_name": "Classroom Teaching",
+      "category": "Education",
+      "aliases": [
+        "Subject Teacher",
+        "Primary School Teaching",
+        "Secondary School Teaching",
+        "Lecturer"
+      ],
+      "distinct_variants": [
+        "Curriculum Development",
+        "Academic Coordination"
+      ]
+    },
+    "Curriculum Development": {
+      "canonical_name": "Curriculum Development",
+      "category": "Education",
+      "aliases": [
+        "Curriculum Design",
+        "Lesson Planning",
+        "Instructional Design"
+      ],
+      "distinct_variants": [
+        "Classroom Teaching",
+        "Academic Coordination"
+      ]
+    },
+    "Academic Coordination": {
+      "canonical_name": "Academic Coordination",
+      "category": "Education Administration",
+      "aliases": [
+        "Academic Coordinator",
+        "School Administration",
+        "Exam Coordination"
+      ],
+      "distinct_variants": [
+        "Classroom Teaching",
+        "Curriculum Development"
+      ]
+    },
+
+    "================ LEGAL ================": {},
+
+    "Corporate Legal Affairs": {
+      "canonical_name": "Corporate Legal Affairs",
+      "category": "Legal",
+      "aliases": [
+        "Corporate Counsel",
+        "Legal Advisory",
+        "Company Secretarial Practice",
+        "SECP Compliance"
+      ],
+      "distinct_variants": [
+        "Litigation",
+        "Labor Law Compliance"
+      ]
+    },
+    "Litigation": {
+      "canonical_name": "Litigation",
+      "category": "Legal",
+      "aliases": [
+        "Civil Litigation",
+        "Criminal Litigation",
+        "Court Practice",
+        "Advocate "
+      ],
+      "distinct_variants": [
+        "Corporate Legal Affairs",
+        "Contract Negotiation"
+      ]
+    },
+    "Contract Negotiation": {
+      "canonical_name": "Contract Negotiation",
+      "category": "Legal & Business",
+      "aliases": [
+        "Contract Drafting",
+        "Contract Management",
+        "Vendor Contract Negotiation"
+      ],
+      "distinct_variants": [
+        "Corporate Legal Affairs",
+        "Procurement Management"
+      ]
+    },
+
+    "================ RETAIL ================": {},
+
+    "Retail Sales": {
+      "canonical_name": "Retail Sales",
+      "category": "Retail",
+      "aliases": [
+        "Store Sales Associate",
+        "Cashier",
+        "Sales Floor Associate"
+      ],
+      "distinct_variants": [
+        "B2B Lead Generation",
+        "Visual Merchandising"
+      ]
+    },
+    "Visual Merchandising": {
+      "canonical_name": "Visual Merchandising",
+      "category": "Retail",
+      "aliases": [
+        "Retail Merchandising",
+        "Store Display Design",
+        "VM Executive"
+      ],
+      "distinct_variants": [
+        "Retail Sales",
+        "Garment Merchandising"
+      ]
+    },
+
+    "================ GRAPHIC DESIGN & CREATIVE ================": {},
+
+    "Graphic Design": {
+      "canonical_name": "Graphic Design",
+      "category": "Creative & Design",
+      "aliases": [
+        "Adobe Photoshop Design",
+        "Adobe Illustrator Design",
+        "Visual Design",
+        "Print & Digital Design"
+      ],
+      "distinct_variants": [
+        "UI/UX Design",
+        "Video Editing"
+      ]
+    },
+    "UI/UX Design": {
+      "canonical_name": "UI/UX Design",
+      "category": "Creative & Design",
+      "aliases": [
+        "UI Design",
+        "UX Design",
+        "Figma Design",
+        "Product Design",
+        "UI/UX"
+      ],
+      "distinct_variants": [
+        "Graphic Design",
+        "Frontend Development"
+      ]
+    },
+    "Video Editing": {
+      "canonical_name": "Video Editing",
+      "category": "Creative & Design",
+      "aliases": [
+        "Adobe Premiere Pro Editing",
+        "Final Cut Pro Editing",
+        "Video Production",
+        "Motion Graphics"
+      ],
+      "distinct_variants": [
+        "Graphic Design",
+        "Photography"
+      ]
+    },
+    "================ SOFTWARE — BACKEND, CLOUD & QA ================": {},
+
+    "Python Development": {
+      "canonical_name": "Python Development",
+      "category": "Software Engineering",
+      "aliases": [
+        "Python Developer",
+        "Python Backend Development",
+        "Django Development",
+        "Flask Development"
+      ],
+      "distinct_variants": [
+        "Java Development",
+        "Node.js",
+        "Data Analysis"
+      ]
+    },
+    "Java Development": {
+      "canonical_name": "Java Development",
+      "category": "Software Engineering",
+      "aliases": [
+        "Java Developer",
+        "Spring Boot Development",
+        "J2EE Development",
+        "Core Java"
+      ],
+      "distinct_variants": [
+        "Python Development",
+        "Android Development (Native)"
+      ]
+    },
+    ".NET Development": {
+      "canonical_name": ".NET Development",
+      "category": "Software Engineering",
+      "aliases": [
+        "Dot Net Developer",
+        "C# Development",
+        "ASP.NET Development",
+        ".NET Core"
+      ],
+      "distinct_variants": [
+        "Java Development",
+        "Python Development"
+      ]
+    },
+    "Android Development (Native)": {
+      "canonical_name": "Android Development (Native)",
+      "category": "Software Engineering",
+      "aliases": [
+        "Kotlin Development",
+        "Native Android Developer",
+        "Android Studio Development"
+      ],
+      "distinct_variants": [
+        "Native iOS (Swift)",
+        "Flutter",
+        "React Native"
+      ]
+    },
+    "Native iOS (Swift)": {
+      "canonical_name": "Native iOS (Swift)",
+      "category": "Software Engineering",
+      "aliases": [
+        "iOS Developer",
+        "Swift Development",
+        "Objective-C Development"
+      ],
+      "distinct_variants": [
+        "Android Development (Native)",
+        "Flutter",
+        "React Native"
+      ]
+    },
+    "Cloud Architecture": {
+      "canonical_name": "Cloud Architecture",
+      "category": "Infrastructure & Cloud",
+      "aliases": [
+        "AWS Solutions Architecture",
+        "Azure Cloud Engineering",
+        "Google Cloud Platform (GCP) Engineering",
+        "Cloud Infrastructure Design"
+      ],
+      "distinct_variants": [
+        "DevOps Engineering",
+        "System Administration"
+      ]
+    },
+    "Software Quality Assurance": {
+      "canonical_name": "Software Quality Assurance",
+      "category": "Software Engineering",
+      "aliases": [
+        "QA Engineer",
+        "Manual Testing",
+        "Test Case Design",
+        "SDET"
+      ],
+      "distinct_variants": [
+        "Automation Testing",
+        "Software Engineering"
+      ]
+    },
+    "Automation Testing": {
+      "canonical_name": "Automation Testing",
+      "category": "Software Engineering",
+      "aliases": [
+        "Selenium Automation",
+        "Test Automation Engineer",
+        "Cypress Testing",
+        "API Testing (Automated)"
+      ],
+      "distinct_variants": [
+        "Software Quality Assurance",
+        "DevOps Engineering"
+      ]
+    },
+
+    "================ ADMIN & OFFICE SUPPORT ================": {},
+
+    "Office Administration": {
+      "canonical_name": "Office Administration",
+      "category": "Administration",
+      "aliases": [
+        "Admin Officer",
+        "Front Desk Management",
+        "Office Coordinator",
+        "General Administration"
+      ],
+      "distinct_variants": [
+        "Executive Assistance",
+        "Facilities Management"
+      ]
+    },
+    "Executive Assistance": {
+      "canonical_name": "Executive Assistance",
+      "category": "Administration",
+      "aliases": [
+        "Executive Assistant",
+        "Personal Assistant ",
+        "Secretary to CEO",
+        "Calendar & Travel Management"
+      ],
+      "distinct_variants": [
+        "Office Administration",
+        "Business Administration"
+      ]
+    },
+    "Facilities Management": {
+      "canonical_name": "Facilities Management",
+      "category": "Administration & Operations",
+      "aliases": [
+        "Facility Manager",
+        "Building Maintenance Management",
+        "Office Facilities Coordinator"
+      ],
+      "distinct_variants": [
+        "Office Administration",
+        "Occupational Health and Safety"
+      ]
+    },
+    "Data Entry": {
+      "canonical_name": "Data Entry",
+      "category": "Administration",
+      "aliases": [
+        "Data Entry Operator",
+        "MS Excel Data Entry",
+        "Encoding Clerk"
+      ],
+      "distinct_variants": [
+        "Data Analysis",
+        "Office Administration"
+      ]
+    },
+
+    "================ HOSPITALITY & FOOD SERVICE ================": {},
+
+    "Hotel Front Office Operations": {
+      "canonical_name": "Hotel Front Office Operations",
+      "category": "Hospitality",
+      "aliases": [
+        "Front Desk Executive (Hotel)",
+        "Guest Relations Officer",
+        "Reservations Agent",
+        "Concierge"
+      ],
+      "distinct_variants": [
+        "Food & Beverage Service",
+        "Housekeeping Management"
+      ]
+    },
+    "Food & Beverage Service": {
+      "canonical_name": "Food & Beverage Service",
+      "category": "Hospitality",
+      "aliases": [
+        "F&B Service",
+        "Waiter/Waitress",
+        "Restaurant Service Staff",
+        "Steward"
+      ],
+      "distinct_variants": [
+        "Culinary Arts",
+        "Hotel Front Office Operations"
+      ]
+    },
+    "Culinary Arts": {
+      "canonical_name": "Culinary Arts",
+      "category": "Hospitality",
+      "aliases": [
+        "Chef",
+        "Cook",
+        "Kitchen Operations",
+        "Commis Chef"
+      ],
+      "distinct_variants": [
+        "Food & Beverage Service",
+        "Food Science and Technology"
+      ]
+    },
+    "Housekeeping Management": {
+      "canonical_name": "Housekeeping Management",
+      "category": "Hospitality",
+      "aliases": [
+        "Housekeeping Supervisor",
+        "Laundry Operations",
+        "Room Attendant Management"
+      ],
+      "distinct_variants": [
+        "Hotel Front Office Operations",
+        "Facilities Management"
+      ]
+    },
+
+    "================ REAL ESTATE ================": {},
+
+    "Real Estate Sales": {
+      "canonical_name": "Real Estate Sales",
+      "category": "Real Estate",
+      "aliases": [
+        "Property Consultant",
+        "Real Estate Agent",
+        "Property Sales Executive",
+        "Plot Marketing"
+      ],
+      "distinct_variants": [
+        "Property Management",
+        "Retail Sales"
+      ]
+    },
+    "Property Management": {
+      "canonical_name": "Property Management",
+      "category": "Real Estate",
+      "aliases": [
+        "Property Manager",
+        "Estate Management",
+        "Tenant Relations Management"
+      ],
+      "distinct_variants": [
+        "Real Estate Sales",
+        "Facilities Management"
+      ]
+    },
+
+    "================ INSURANCE ================": {},
+
+    "Insurance Underwriting": {
+      "canonical_name": "Insurance Underwriting",
+      "category": "Insurance",
+      "aliases": [
+        "Underwriter",
+        "Risk Assessment (Insurance)",
+        "Policy Underwriting"
+      ],
+      "distinct_variants": [
+        "Insurance Sales",
+        "Claims Adjusting"
+      ]
+    },
+    "Claims Adjusting": {
+      "canonical_name": "Claims Adjusting",
+      "category": "Insurance",
+      "aliases": [
+        "Claims Officer",
+        "Claims Processing",
+        "Loss Adjuster"
+      ],
+      "distinct_variants": [
+        "Insurance Underwriting",
+        "Insurance Sales"
+      ]
+    },
+    "Insurance Sales": {
+      "canonical_name": "Insurance Sales",
+      "category": "Insurance",
+      "aliases": [
+        "Insurance Agent",
+        "Takaful Sales Consultant",
+        "Life Insurance Advisor"
+      ],
+      "distinct_variants": [
+        "Insurance Underwriting",
+        "B2B Lead Generation"
+      ]
+    },
+
+    "================ MANUFACTURING & PRODUCTION ================": {},
+
+    "Production Planning": {
+      "canonical_name": "Production Planning",
+      "category": "Manufacturing",
+      "aliases": [
+        "Production Planning and Control (PPC)",
+        "Manufacturing Scheduling",
+        "Production Supervisor"
+      ],
+      "distinct_variants": [
+        "Warehouse & Inventory Management",
+        "Quality Management"
+      ]
+    },
+    "Machine Operations": {
+      "canonical_name": "Machine Operations",
+      "category": "Manufacturing",
+      "aliases": [
+        "Machine Operator",
+        "CNC Operator",
+        "Production Line Operator"
+      ],
+      "distinct_variants": [
+        "Production Planning",
+        "Maintenance Engineering"
+      ]
+    },
+    "Maintenance Engineering": {
+      "canonical_name": "Maintenance Engineering",
+      "category": "Manufacturing & Engineering",
+      "aliases": [
+        "Plant Maintenance",
+        "Preventive Maintenance Engineer",
+        "Mechanical Maintenance Technician"
+      ],
+      "distinct_variants": [
+        "Machine Operations",
+        "Electrical Maintenance"
+      ]
+    },
+    "Electrical Maintenance": {
+      "canonical_name": "Electrical Maintenance",
+      "category": "Skilled Trades",
+      "aliases": [
+        "Electrician",
+        "Industrial Electrician",
+        "Electrical Wiring Technician",
+        "Panel Wiring"
+      ],
+      "distinct_variants": [
+        "Maintenance Engineering",
+        "HVAC Technician"
+      ]
+    },
+    "Plumbing": {
+      "canonical_name": "Plumbing",
+      "category": "Skilled Trades",
+      "aliases": [
+        "Plumber",
+        "Pipefitting",
+        "Sanitary Installation"
+      ],
+      "distinct_variants": [
+        "HVAC Technician",
+        "Construction Site Supervision"
+      ]
+    },
+    "HVAC Technician": {
+      "canonical_name": "HVAC Technician",
+      "category": "Skilled Trades",
+      "aliases": [
+        "HVAC",
+        "Air Conditioning Technician",
+        "Refrigeration Technician"
+      ],
+      "distinct_variants": [
+        "Electrical Maintenance",
+        "Plumbing"
+      ]
+    },
+    "Heavy Equipment Operation": {
+      "canonical_name": "Heavy Equipment Operation",
+      "category": "Skilled Trades",
+      "aliases": [
+        "Heavy Equipment Operator",
+        "Crane Operator",
+        "Excavator Operator",
+        "Forklift Operator"
+      ],
+      "distinct_variants": [
+        "Construction Site Supervision",
+        "Fleet Management"
+      ]
+    },
+
+    "================ AUTOMOTIVE ================": {},
+
+    "Automotive Repair": {
+      "canonical_name": "Automotive Repair",
+      "category": "Automotive",
+      "aliases": [
+        "Auto Mechanic",
+        "Vehicle Maintenance Technician",
+        "Car Diagnostics"
+      ],
+      "distinct_variants": [
+        "Fleet Management",
+        "Heavy Equipment Operation"
+      ]
+    },
+    "Fleet Management": {
+      "canonical_name": "Fleet Management",
+      "category": "Automotive & Logistics",
+      "aliases": [
+        "Fleet Operations",
+        "Transport Manager",
+        "Vehicle Fleet Coordinator"
+      ],
+      "distinct_variants": [
+        "Automotive Repair",
+        "Warehouse & Inventory Management"
+      ]
+    },
+
+    "================ ENERGY & OIL/GAS ================": {},
+
+    "Oil & Gas Field Operations": {
+      "canonical_name": "Oil & Gas Field Operations",
+      "category": "Energy",
+      "aliases": [
+        "Rig Operations",
+        "Drilling Engineer Support",
+        "Field Operator (Oil & Gas)"
+      ],
+      "distinct_variants": [
+        "Petroleum Engineering",
+        "HSE Management"
+      ]
+    },
+    "HSE Management": {
+      "canonical_name": "HSE Management",
+      "category": "Energy & Safety",
+      "aliases": [
+        "Health Safety Environment Officer",
+        "HSE Officer",
+        "NEBOSH Certified Safety Officer"
+      ],
+      "distinct_variants": [
+        "Occupational Health and Safety",
+        "Oil & Gas Field Operations"
+      ]
+    },
+    "Power Plant Operations": {
+      "canonical_name": "Power Plant Operations",
+      "category": "Energy",
+      "aliases": [
+        "Power Plant Engineer",
+        "Grid Station Operations",
+        "Turbine Operations"
+      ],
+      "distinct_variants": [
+        "Electrical Maintenance",
+        "Oil & Gas Field Operations"
+      ]
+    },
+
+    "================ AGRICULTURE ================": {},
+
+    "Farm Management": {
+      "canonical_name": "Farm Management",
+      "category": "Agriculture",
+      "aliases": [
+        "Agricultural Field Officer",
+        "Crop Management",
+        "Farm Supervisor"
+      ],
+      "distinct_variants": [
+        "Agribusiness Management",
+        "Veterinary Medicine"
+      ]
+    },
+    "Agricultural Extension Services": {
+      "canonical_name": "Agricultural Extension Services",
+      "category": "Agriculture",
+      "aliases": [
+        "Agri Extension Officer",
+        "Farmer Training & Advisory",
+        "Field Extension Worker"
+      ],
+      "distinct_variants": [
+        "Farm Management",
+        "Agribusiness Management"
+      ]
+    },
+
+    "================ MEDIA & JOURNALISM ================": {},
+
+    "News Reporting": {
+      "canonical_name": "News Reporting",
+      "category": "Media & Journalism",
+      "aliases": [
+        "Journalist",
+        "News Correspondent",
+        "Field Reporter",
+        "News Anchor"
+      ],
+      "distinct_variants": [
+        "Content Writing",
+        "Video Editing"
+      ]
+    },
+    "Content Writing": {
+      "canonical_name": "Content Writing",
+      "category": "Media & Content",
+      "aliases": [
+        "Copywriting",
+        "Blog Writing",
+        "SEO Content Writer",
+        "Script Writing"
+      ],
+      "distinct_variants": [
+        "News Reporting",
+        "Performance Marketing"
+      ]
+    },
+
+    "================ NGO / DEVELOPMENT SECTOR ================": {},
+
+    "Program Management (Development Sector)": {
+      "canonical_name": "Program Management (Development Sector)",
+      "category": "NGO & Development",
+      "aliases": [
+        "Project Officer (NGO)",
+        "M&E Officer",
+        "Monitoring and Evaluation",
+        "Development Sector Program Coordinator"
+      ],
+      "distinct_variants": [
+        "Project Management",
+        "Community Mobilization"
+      ]
+    },
+    "Community Mobilization": {
+      "canonical_name": "Community Mobilization",
+      "category": "NGO & Development",
+      "aliases": [
+        "Community Mobilizer",
+        "Social Mobilization Officer",
+        "Field Facilitator"
+      ],
+      "distinct_variants": [
+        "Program Management (Development Sector)",
+        "Social Work"
+      ]
+    },
+
+    "================ SECURITY SERVICES ================": {},
+
+    "Security Operations": {
+      "canonical_name": "Security Operations",
+      "category": "Security Services",
+      "aliases": [
+        "Security Guard",
+        "Security Supervisor",
+        "CCTV Surveillance Operator",
+        "Access Control Management"
+      ],
+      "distinct_variants": [
+        "Cybersecurity",
+        "HSE Management"
+      ]
+    },
+
+    "================ FITNESS & BEAUTY ================": {},
+
+    "Fitness Training": {
+      "canonical_name": "Fitness Training",
+      "category": "Fitness & Wellness",
+      "aliases": [
+        "Personal Trainer",
+        "Gym Instructor",
+        "Fitness Coach"
+      ],
+      "distinct_variants": [
+        "Sports Sciences",
+        "Nutrition and Dietetics"
+      ]
+    },
+    "Beauty & Salon Services": {
+      "canonical_name": "Beauty & Salon Services",
+      "category": "Beauty & Wellness",
+      "aliases": [
+        "Hair Stylist",
+        "Beautician",
+        "Makeup Artist",
+        "Salon Technician"
+      ],
+      "distinct_variants": [
+        "Fitness Training",
+        "Fashion Design"
+      ]
+    },
+    "================ AVIATION & MARITIME ================": {},
+
+    "Commercial Pilot Operations": {
+      "canonical_name": "Commercial Pilot Operations",
+      "category": "Aviation",
+      "aliases": [
+        "Airline Pilot",
+        "First Officer",
+        "Commercial Aviator",
+        "CPL Holder"
+      ],
+      "distinct_variants": [
+        "Air Traffic Control",
+        "Ground Handling Operations"
+      ]
+    },
+    "Cabin Crew Services": {
+      "canonical_name": "Cabin Crew Services",
+      "category": "Aviation",
+      "aliases": [
+        "Flight Attendant",
+        "Air Hostess",
+        "In-Flight Service Crew"
+      ],
+      "distinct_variants": [
+        "Hotel Front Office Operations",
+        "Ground Handling Operations"
+      ]
+    },
+    "Air Traffic Control": {
+      "canonical_name": "Air Traffic Control",
+      "category": "Aviation",
+      "aliases": [
+        "ATC Officer",
+        "Air Traffic Controller",
+        "Approach Control"
+      ],
+      "distinct_variants": [
+        "Commercial Pilot Operations",
+        "Ground Handling Operations"
+      ]
+    },
+    "Ground Handling Operations": {
+      "canonical_name": "Ground Handling Operations",
+      "category": "Aviation",
+      "aliases": [
+        "Airport Ground Staff",
+        "Ramp Agent",
+        "Baggage Handling Operations",
+        "Aircraft Marshalling"
+      ],
+      "distinct_variants": [
+        "Cabin Crew Services",
+        "Fleet Management"
+      ]
+    },
+    "Aircraft Maintenance Engineering": {
+      "canonical_name": "Aircraft Maintenance Engineering",
+      "category": "Aviation",
+      "aliases": [
+        "AME",
+        "Avionics Technician",
+        "Aircraft Maintenance Technician (AMT)"
+      ],
+      "distinct_variants": [
+        "Aeronautical Engineering",
+        "Electrical Maintenance"
+      ]
+    },
+    "Marine Engineering Operations": {
+      "canonical_name": "Marine Engineering Operations",
+      "category": "Maritime",
+      "aliases": [
+        "Ship Engineer",
+        "Marine Engineer Officer",
+        "Chief Engineer (Marine)"
+      ],
+      "distinct_variants": [
+        "Deck Operations (Maritime)",
+        "Maintenance Engineering"
+      ]
+    },
+    "Deck Operations (Maritime)": {
+      "canonical_name": "Deck Operations (Maritime)",
+      "category": "Maritime",
+      "aliases": [
+        "Ship Captain",
+        "Deck Officer",
+        "Navigation Officer",
+        "Master Mariner"
+      ],
+      "distinct_variants": [
+        "Marine Engineering Operations",
+        "Marine Cargo Surveying"
+      ]
+    },
+    "Marine Cargo Surveying": {
+      "canonical_name": "Marine Cargo Surveying",
+      "category": "Maritime & Logistics",
+      "aliases": [
+        "Cargo Surveyor",
+        "Port Operations Officer",
+        "Stevedoring Supervisor"
+      ],
+      "distinct_variants": [
+        "Customs Clearance & Import/Export",
+        "Deck Operations (Maritime)"
+      ]
+    },
+
+    "================ PHARMACEUTICAL MANUFACTURING ================": {},
+
+    "Pharmaceutical Production": {
+      "canonical_name": "Pharmaceutical Production",
+      "category": "Pharmaceutical Manufacturing",
+      "aliases": [
+        "Production Pharmacist",
+        "GMP Compliance Officer",
+        "Formulation Development",
+        "Tablet Manufacturing Operations"
+      ],
+      "distinct_variants": [
+        "Dispensing Pharmacy",
+        "Pharmaceutical Quality Control"
+      ]
+    },
+    "Pharmaceutical Quality Control": {
+      "canonical_name": "Pharmaceutical Quality Control",
+      "category": "Pharmaceutical Manufacturing",
+      "aliases": [
+        "QC Analyst (Pharma)",
+        "Industrial Pharmaceutical Quality Control",
+        "In-Process Quality Control (IPQC)"
+      ],
+      "distinct_variants": [
+        "Pharmaceutical Production",
+        "Pharmaceutical Regulatory Affairs"
+      ]
+    },
+    "Pharmaceutical Regulatory Affairs": {
+      "canonical_name": "Pharmaceutical Regulatory Affairs",
+      "category": "Pharmaceutical Manufacturing",
+      "aliases": [
+        "DRAP Registration",
+        "Regulatory Affairs Officer (Pharma)",
+        "Drug Registration Specialist"
+      ],
+      "distinct_variants": [
+        "Pharmaceutical Quality Control",
+        "Compliance & Risk Management"
+      ]
+    },
+
+    "================ ARCHITECTURAL & 3D DESIGN SOFTWARE ================": {},
+
+    "Revit / BIM Modeling": {
+      "canonical_name": "Revit / BIM Modeling",
+      "category": "Engineering & Design",
+      "aliases": [
+        "Revit",
+        "Building Information Modeling (BIM)",
+        "BIM Coordinator",
+        "BIM Modeler"
+      ],
+      "distinct_variants": [
+        "AutoCAD",
+        "SketchUp / 3D Visualization"
+      ]
+    },
+    "SketchUp / 3D Visualization": {
+      "canonical_name": "SketchUp / 3D Visualization",
+      "category": "Engineering & Design",
+      "aliases": [
+        "SketchUp",
+        "3ds Max",
+        "Lumion Rendering",
+        "Architectural Visualization",
+        "3D Rendering Artist"
+      ],
+      "distinct_variants": [
+        "Revit / BIM Modeling",
+        "Interior Design"
+      ]
+    },
+
+    "================ FREIGHT & SHIPPING (EXTENDED) ================": {},
+
+    "Customs House Agency": {
+      "canonical_name": "Customs House Agency",
+      "category": "Supply Chain & Logistics",
+      "aliases": [
+        "Customs House Agent (CHA)",
+        "Clearing Agent",
+        "CHAL License Holder"
+      ],
+      "distinct_variants": [
+        "Customs Clearance & Import/Export",
+        "Marine Cargo Surveying"
+      ]
+    },
+
+    "================ INTERNATIONAL BPO (VOICE PROCESS) ================": {},
+
+    "International Voice Process": {
+      "canonical_name": "International Voice Process",
+      "category": "Customer Service",
+      "aliases": [
+        "US Voice Process",
+        "UK Voice Process",
+        "International Call Center Agent",
+        "Neutral Accent Voice Support",
+        "Night Shift Voice Process"
+      ],
+      "distinct_variants": [
+        "BPO Customer Support",
+        "Technical Support"
+      ]
+    },
+    "Collections & Recovery (BPO)": {
+      "canonical_name": "Collections & Recovery (BPO)",
+      "category": "Customer Service & Finance",
+      "aliases": [
+        "Collections Agent",
+        "Debt Recovery Specialist",
+        "International Collections Process"
+      ],
+      "distinct_variants": [
+        "International Voice Process",
+        "Credit & Risk Analysis"
+      ]
+    },
+
+    "================ GOVERNMENT & PUBLIC SECTOR ================": {},
+
+    "Civil Service Administration": {
+      "canonical_name": "Civil Service Administration",
+      "category": "Government & Public Sector",
+      "aliases": [
+        "CSS Officer",
+        "Bureaucratic Administration",
+        "District Management Group (DMG)",
+        "Federal Civil Service"
+      ],
+      "distinct_variants": [
+        "Public Administration",
+        "Public Procurement Compliance"
+      ]
+    },
+    "Public Procurement Compliance": {
+      "canonical_name": "Public Procurement Compliance",
+      "category": "Government & Public Sector",
+      "aliases": [
+        "PPRA Rules Compliance",
+        "Public Sector Tendering",
+        "Government Procurement Officer"
+      ],
+      "distinct_variants": [
+        "Procurement Management",
+        "Civil Service Administration"
+      ]
+    },
+
+    "================ RENEWABLE ENERGY ================": {},
+
+    "Solar PV Installation & Design": {
+      "canonical_name": "Solar PV Installation & Design",
+      "category": "Renewable Energy",
+      "aliases": [
+        "Solar Panel Installer",
+        "Solar PV Design Engineer",
+        "Off-Grid Solar System Design",
+        "Net Metering Installation"
+      ],
+      "distinct_variants": [
+        "Power Plant Operations",
+        "Electrical Maintenance"
+      ]
+    },
+    "Renewable Energy Project Management": {
+      "canonical_name": "Renewable Energy Project Management",
+      "category": "Renewable Energy",
+      "aliases": [
+        "Solar Project Manager",
+        "Wind Energy Project Coordinator",
+        "Clean Energy Project Development"
+      ],
+      "distinct_variants": [
+        "Solar PV Installation & Design",
+        "Project Management"
+      ]
+    },
+
+    "================ FRANCHISE / QSR OPERATIONS ================": {},
+
+    "QSR Restaurant Management": {
+      "canonical_name": "QSR Restaurant Management",
+      "category": "Franchise & Retail Food Operations",
+      "aliases": [
+        "Quick Service Restaurant Manager",
+        "Shift Manager (QSR)",
+        "Franchise Operations Manager",
+        "POS System Operations"
+      ],
+      "distinct_variants": [
+        "Culinary Arts",
+        "Food & Beverage Service"
+      ]
+    },
+
+    "================ PRODUCT MANAGEMENT ================": {},
+
+    "Product Management": {
+      "canonical_name": "Product Management",
+      "category": "Business & Technology",
+      "aliases": [
+        "Product Owner",
+        "Product Manager",
+        "Digital Product Management",
+        "Product Roadmap Ownership"
+      ],
+      "distinct_variants": [
+        "Project Management",
+        "Business Analysis"
+      ]
+    },
+    "Business Analysis": {
+      "canonical_name": "Business Analysis",
+      "category": "Business & Technology",
+      "aliases": [
+        "Business Analyst",
+        "Requirements Gathering",
+        "Process Mapping"
+      ],
+      "distinct_variants": [
+        "Product Management",
+        "Project Management"
+      ]
+    },
+
+    "================ E-COMMERCE (EXTENDED) ================": {},
+
+    "Daraz Seller Operations": {
+      "canonical_name": "Daraz Seller Operations",
+      "category": "E-Commerce",
+      "aliases": [
+        "Daraz Seller Center Management",
+        "Local Marketplace Seller Ops",
+        "Daraz Account Manager"
+      ],
+      "distinct_variants": [
+        "Amazon Virtual Assistant",
+        "Shopify Store Manager"
+      ]
+    },
+    "Shopify Store Manager": {
+      "canonical_name": "Shopify Store Manager",
+      "category": "E-Commerce",
+      "aliases": [
+        "Shopify Manager",
+        "Shopify Store Setup",
+        "D2C E-Commerce Manager"
+      ],
+      "distinct_variants": [
+        "Amazon Virtual Assistant",
+        "Daraz Seller Operations",
+        "WordPress Development"
+      ]
+    },
+
+    "================ BROADCAST & PHOTOGRAPHY ================": {},
+
+    "Broadcast Production": {
+      "canonical_name": "Broadcast Production",
+      "category": "Media & Journalism",
+      "aliases": [
+        "TV Producer",
+        "Broadcast Journalist",
+        "Studio Production Assistant",
+        "Camera Operator (Broadcast)"
+      ],
+      "distinct_variants": [
+        "News Reporting",
+        "Video Editing"
+      ]
+    },
+    "Photography": {
+      "canonical_name": "Photography",
+      "category": "Creative & Media",
+      "aliases": [
+        "Photographer",
+        "Studio Photography",
+        "Event Photography",
+        "Product Photography"
+      ],
+      "distinct_variants": [
+        "Video Editing",
+        "Broadcast Production"
+      ]
+    }
+
+
+  }
+}

@@ -1,0 +1,1574 @@
+{
+  
+  "Computer Science": {
+    "aliases": [
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing"
+    ],
+    "related_fields": [
+      "Software Engineering",
+      "SE",
+      "BSSE",
+      "Software Systems Engineering",
+      "Information Technology",
+      "IT",
+      "BSIT",
+      "Information Technologies",
+      "Information Systems",
+      "IS",
+      "Computer Engineering",
+      "CpE",
+      "Computer Systems Engineering",
+      "Computer and Information Systems Engineering",
+      "CISE",
+      "Data Science",
+      "DS",
+      "Data Sciences",
+      "Big Data Analytics"
+    ]
+  },
+  "Software Engineering": {
+    "aliases": [
+      "SE",
+      "BSSE",
+      "Software Systems Engineering"
+    ],
+    "related_fields": [
+      "Computer Science",
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing",
+      "Information Technology",
+      "IT",
+      "BSIT",
+      "Information Technologies",
+      "Information Systems",
+      "IS",
+      "Computer Engineering",
+      "CpE",
+      "Computer Systems Engineering",
+      "Computer and Information Systems Engineering",
+      "CISE"
+    ]
+  },
+  "Information Technology": {
+    "aliases": [
+      "IT",
+      "BSIT",
+      "Information Technologies",
+      "Information Systems",
+      "IS"
+    ],
+    "related_fields": [
+      "Computer Science",
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing",
+      "Software Engineering",
+      "SE",
+      "BSSE",
+      "Software Systems Engineering",
+      "Computer Engineering",
+      "CpE",
+      "Computer Systems Engineering",
+      "Computer and Information Systems Engineering",
+      "CISE"
+    ]
+  },
+  "Computer Engineering": {
+    "aliases": [
+      "CpE",
+      "Computer Systems Engineering",
+      "Computer and Information Systems Engineering",
+      "CISE"
+    ],
+    "related_fields": [
+      "Computer Science",
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing",
+      "Electrical Engineering",
+      "EE",
+      "BSEE",
+      "Electrical and Electronics Engineering",
+      "Power Engineering",
+      "Electronics Engineering",
+      "Electronic Engineering",
+      "Telecommunication Engineering",
+      "Telecom Engineering",
+      "Software Engineering",
+      "SE",
+      "BSSE",
+      "Software Systems Engineering",
+      "Mechatronics Engineering",
+      "Mechatronics and Control Engineering"
+    ],
+    "note": "Bare 'CE' collides with Civil Engineering in Pakistani usage — disambiguate by institution/coursework context."
+  },
+  "Artificial Intelligence": {
+    "aliases": [
+      "AI",
+      "Machine Intelligence"
+    ],
+    "related_fields": [
+      "Computer Science",
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing",
+      "Data Science",
+      "DS",
+      "Data Sciences",
+      "Big Data Analytics",
+      "Software Engineering",
+      "SE",
+      "BSSE",
+      "Software Systems Engineering"
+    ]
+  },
+  "Data Science": {
+    "aliases": [
+      "DS",
+      "Data Sciences",
+      "Big Data Analytics"
+    ],
+    "related_fields": [
+      "Computer Science",
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing",
+      "Statistics",
+      "Stats",
+      "Applied Statistics",
+      "Mathematics",
+      "Applied Mathematics",
+      "Math",
+      "Artificial Intelligence",
+      "AI",
+      "Machine Intelligence",
+      "Economics",
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics"
+    ]
+  },
+  "Bioinformatics": {
+    "aliases": [],
+    "related_fields": [
+      "Computer Science",
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing",
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Biotechnology",
+      "Statistics",
+      "Stats",
+      "Applied Statistics"
+    ]
+  },
+  "Business Administration": {
+    "aliases": [
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences"
+    ],
+    "related_fields": [
+      "Commerce",
+      "B.Com",
+      "BCom",
+      "M.Com",
+      "MCom",
+      "Economics",
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics",
+      "Accounting & Finance",
+      "A&F",
+      "Accounting and Finance",
+      "ACCA",
+      "CA",
+      "Chartered Accountancy",
+      "ICMA",
+      "CFA",
+      "CPA",
+      "CAT",
+      "Supply Chain",
+      "SCM",
+      "Supply Chain Management",
+      "Logistics and Supply Chain Management",
+      "Operations and Supply Chain",
+      "Public Administration",
+      "MPA",
+      "Public Policy",
+      "Human Resource Management",
+      "HRM",
+      "HR"
+    ]
+  },
+  "Commerce": {
+    "aliases": [
+      "B.Com",
+      "BCom",
+      "M.Com",
+      "MCom"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Accounting & Finance",
+      "A&F",
+      "Accounting and Finance",
+      "ACCA",
+      "CA",
+      "Chartered Accountancy",
+      "ICMA",
+      "CFA",
+      "CPA",
+      "CAT",
+      "Economics",
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics"
+    ]
+  },
+  "Accounting & Finance": {
+    "aliases": [
+      "A&F",
+      "Accounting and Finance",
+      "ACCA",
+      "CA",
+      "Chartered Accountancy",
+      "ICMA",
+      "CFA",
+      "CPA",
+      "CAT"
+    ],
+    "related_fields": [
+      "Commerce",
+      "B.Com",
+      "BCom",
+      "M.Com",
+      "MCom",
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Economics",
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics"
+    ],
+    "note": "ACCA/CA/ICMA/CFA/CPA are professional licensing qualifications, not university degrees, but Pakistani candidates routinely list them in the 'education' field in place of or alongside a formal degree — kept as strong alias signals."
+  },
+  "Economics": {
+    "aliases": [
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Statistics",
+      "Stats",
+      "Applied Statistics",
+      "Mathematics",
+      "Applied Mathematics",
+      "Math",
+      "Accounting & Finance",
+      "A&F",
+      "Accounting and Finance",
+      "ACCA",
+      "CA",
+      "Chartered Accountancy",
+      "ICMA",
+      "CFA",
+      "CPA",
+      "CAT"
+    ]
+  },
+  "Supply Chain": {
+    "aliases": [
+      "SCM",
+      "Supply Chain Management",
+      "Logistics and Supply Chain Management",
+      "Operations and Supply Chain"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Industrial Engineering",
+      "IE",
+      "BSIE",
+      "Industrial and Manufacturing Engineering",
+      "Industrial Engineering and Management"
+    ]
+  },
+  "Public Administration": {
+    "aliases": [
+      "MPA",
+      "Public Policy"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Sociology",
+      "Social Sciences",
+      "Anthropology and Sociology",
+      "Economics",
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics"
+    ]
+  },
+  "Human Resource Management": {
+    "aliases": [
+      "HRM",
+      "HR"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Psychology",
+      "Applied Psychology",
+      "Clinical Psychology"
+    ]
+  },
+  "Project Management": {
+    "aliases": [
+      "PM",
+      "PMP"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Industrial Engineering",
+      "IE",
+      "BSIE",
+      "Industrial and Manufacturing Engineering",
+      "Industrial Engineering and Management"
+    ],
+    "note": "PMP is a professional certification (PMI), not an academic degree, but frequently listed under education by candidates."
+  },
+  "Actuarial Science": {
+    "aliases": [],
+    "related_fields": [
+      "Statistics",
+      "Stats",
+      "Applied Statistics",
+      "Mathematics",
+      "Applied Mathematics",
+      "Math",
+      "Economics",
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics"
+    ]
+  },
+  "Civil Engineering": {
+    "aliases": [
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering"
+    ],
+    "related_fields": [
+      "Structural Engineering",
+      "Structural Design Engineering",
+      "Construction Management",
+      "Construction Engineering and Management"
+    ],
+    "note": "Bare 'CE' abbreviation collides with Computer Engineering — disambiguate by context."
+  },
+  "Structural Engineering": {
+    "aliases": [
+      "Structural Design Engineering"
+    ],
+    "related_fields": [
+      "Civil Engineering",
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering"
+    ],
+    "note": "Usually a specialization on top of a Civil Engineering base — related but distinct; should get partial-credit matching against a plain 'Civil Engineering' requirement, not a full match."
+  },
+  "Construction Management": {
+    "aliases": [
+      "Construction Engineering and Management"
+    ],
+    "related_fields": [
+      "Civil Engineering",
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering",
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences"
+    ]
+  },
+  "Urban and Regional Planning": {
+    "aliases": [
+      "Urban Planning",
+      "Town Planning"
+    ],
+    "related_fields": [
+      "Architecture",
+      "B.Arch",
+      "Architectural Engineering",
+      "Civil Engineering",
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering"
+    ]
+  },
+  "Electrical Engineering": {
+    "aliases": [
+      "EE",
+      "BSEE",
+      "Electrical and Electronics Engineering",
+      "Power Engineering"
+    ],
+    "related_fields": [
+      "Electronics Engineering",
+      "Electronic Engineering",
+      "Telecommunication Engineering",
+      "Telecom Engineering",
+      "Computer Engineering",
+      "CpE",
+      "Computer Systems Engineering",
+      "Computer and Information Systems Engineering",
+      "CISE",
+      "Mechatronics Engineering",
+      "Mechatronics and Control Engineering"
+    ]
+  },
+  "Electronics Engineering": {
+    "aliases": [
+      "Electronic Engineering",
+      "Telecommunication Engineering",
+      "Telecom Engineering"
+    ],
+    "related_fields": [
+      "Electrical Engineering",
+      "EE",
+      "BSEE",
+      "Electrical and Electronics Engineering",
+      "Power Engineering",
+      "Computer Engineering",
+      "CpE",
+      "Computer Systems Engineering",
+      "Computer and Information Systems Engineering",
+      "CISE",
+      "Mechatronics Engineering",
+      "Mechatronics and Control Engineering"
+    ],
+    "note": "Distinct HEC/PEC discipline from Electrical Engineering at many universities (NED, GIKI, MUET etc.) — related field, not a synonym."
+  },
+  "Mechanical Engineering": {
+    "aliases": [
+      "ME",
+      "BSME",
+      "Mechanical Engineering Technology"
+    ],
+    "related_fields": [
+      "Mechatronics Engineering",
+      "Mechatronics and Control Engineering",
+      "Industrial Engineering",
+      "IE",
+      "BSIE",
+      "Industrial and Manufacturing Engineering",
+      "Industrial Engineering and Management"
+    ]
+  },
+  "Chemical Engineering": {
+    "aliases": [
+      "ChE",
+      "BSChE",
+      "Chemical and Process Engineering"
+    ],
+    "related_fields": [
+      "Industrial Engineering",
+      "IE",
+      "BSIE",
+      "Industrial and Manufacturing Engineering",
+      "Industrial Engineering and Management",
+      "Textile Engineering",
+      "Textile Engineering and Management",
+      "Textile Technology"
+    ]
+  },
+  "Industrial Engineering": {
+    "aliases": [
+      "IE",
+      "BSIE",
+      "Industrial and Manufacturing Engineering",
+      "Industrial Engineering and Management"
+    ],
+    "related_fields": [
+      "Mechanical Engineering",
+      "ME",
+      "BSME",
+      "Mechanical Engineering Technology",
+      "Supply Chain",
+      "SCM",
+      "Supply Chain Management",
+      "Logistics and Supply Chain Management",
+      "Operations and Supply Chain",
+      "Project Management",
+      "PM",
+      "PMP"
+    ]
+  },
+  "Mechatronics Engineering": {
+    "aliases": [
+      "Mechatronics and Control Engineering"
+    ],
+    "related_fields": [
+      "Mechanical Engineering",
+      "ME",
+      "BSME",
+      "Mechanical Engineering Technology",
+      "Electrical Engineering",
+      "EE",
+      "BSEE",
+      "Electrical and Electronics Engineering",
+      "Power Engineering",
+      "Computer Engineering",
+      "CpE",
+      "Computer Systems Engineering",
+      "Computer and Information Systems Engineering",
+      "CISE"
+    ]
+  },
+  "Textile Engineering": {
+    "aliases": [
+      "Textile Engineering and Management",
+      "Textile Technology"
+    ],
+    "related_fields": [
+      "Chemical Engineering",
+      "ChE",
+      "BSChE",
+      "Chemical and Process Engineering",
+      "Industrial Engineering",
+      "IE",
+      "BSIE",
+      "Industrial and Manufacturing Engineering",
+      "Industrial Engineering and Management"
+    ]
+  },
+  "Petroleum Engineering": {
+    "aliases": [],
+    "related_fields": [
+      "Chemical Engineering",
+      "ChE",
+      "BSChE",
+      "Chemical and Process Engineering",
+      "Mining Engineering"
+    ]
+  },
+  "Mining Engineering": {
+    "aliases": [],
+    "related_fields": [
+      "Petroleum Engineering",
+      "Metallurgical and Materials Engineering",
+      "Metallurgical Engineering",
+      "Materials Engineering",
+      "Materials Science",
+      "Civil Engineering",
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering"
+    ]
+  },
+  "Metallurgical and Materials Engineering": {
+    "aliases": [
+      "Metallurgical Engineering",
+      "Materials Engineering",
+      "Materials Science"
+    ],
+    "related_fields": [
+      "Mechanical Engineering",
+      "ME",
+      "BSME",
+      "Mechanical Engineering Technology",
+      "Chemical Engineering",
+      "ChE",
+      "BSChE",
+      "Chemical and Process Engineering",
+      "Mining Engineering"
+    ]
+  },
+  "Aeronautical Engineering": {
+    "aliases": [
+      "Aerospace Engineering",
+      "Avionics Engineering"
+    ],
+    "related_fields": [
+      "Mechanical Engineering",
+      "ME",
+      "BSME",
+      "Mechanical Engineering Technology",
+      "Electrical Engineering",
+      "EE",
+      "BSEE",
+      "Electrical and Electronics Engineering",
+      "Power Engineering"
+    ]
+  },
+  "Architecture": {
+    "aliases": [
+      "B.Arch",
+      "Architectural Engineering"
+    ],
+    "related_fields": [
+      "Design",
+      "BDes",
+      "B.Des",
+      "Communication Design",
+      "Product Design",
+      "Graphic Design"
+    ]
+  },
+  "Interior Design": {
+    "aliases": [],
+    "related_fields": [
+      "Architecture",
+      "B.Arch",
+      "Architectural Engineering",
+      "Design",
+      "BDes",
+      "B.Des",
+      "Communication Design",
+      "Product Design",
+      "Graphic Design",
+      "Fine Arts",
+      "BFA",
+      "MFA",
+      "Visual Arts",
+      "Studio Arts"
+    ]
+  },
+  "Physics": {
+    "aliases": [
+      "Applied Physics"
+    ],
+    "related_fields": [
+      "Mathematics",
+      "Applied Mathematics",
+      "Math"
+    ]
+  },
+  "Mathematics": {
+    "aliases": [
+      "Applied Mathematics",
+      "Math"
+    ],
+    "related_fields": [
+      "Statistics",
+      "Stats",
+      "Applied Statistics",
+      "Physics",
+      "Applied Physics",
+      "Actuarial Science"
+    ]
+  },
+  "Statistics": {
+    "aliases": [
+      "Stats",
+      "Applied Statistics"
+    ],
+    "related_fields": [
+      "Mathematics",
+      "Applied Mathematics",
+      "Math",
+      "Data Science",
+      "DS",
+      "Data Sciences",
+      "Big Data Analytics",
+      "Economics",
+      "Econ",
+      "Economic Sciences",
+      "Applied Economics",
+      "Actuarial Science"
+    ]
+  },
+  "Biology": {
+    "aliases": [
+      "Biological Sciences",
+      "Life Sciences"
+    ],
+    "related_fields": [
+      "Biochemistry",
+      "Chemistry",
+      "Applied Chemistry",
+      "Medical Laboratory Science",
+      "MLT",
+      "Medical Laboratory Technology",
+      "Clinical Laboratory Science",
+      "Biomedical Laboratory Science",
+      "Microbiology"
+    ]
+  },
+  "Biochemistry": {
+    "aliases": [],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Chemistry",
+      "Applied Chemistry"
+    ]
+  },
+  "Chemistry": {
+    "aliases": [
+      "Applied Chemistry"
+    ],
+    "related_fields": [
+      "Biochemistry"
+    ]
+  },
+  "Microbiology": {
+    "aliases": [],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Biotechnology",
+      "Medical Laboratory Science",
+      "MLT",
+      "Medical Laboratory Technology",
+      "Clinical Laboratory Science",
+      "Biomedical Laboratory Science"
+    ]
+  },
+  "Biotechnology": {
+    "aliases": [],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Microbiology",
+      "Biochemistry"
+    ]
+  },
+  "Genetics": {
+    "aliases": [],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Biotechnology"
+    ]
+  },
+  "Environmental Science": {
+    "aliases": [
+      "Environmental Sciences"
+    ],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Agriculture Sciences",
+      "Agriculture",
+      "Agricultural Sciences",
+      "Civil Engineering",
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering"
+    ]
+  },
+  "Agriculture Sciences": {
+    "aliases": [
+      "Agriculture",
+      "Agricultural Sciences"
+    ],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Food Science and Technology",
+      "Food Technology",
+      "Food Sciences",
+      "Environmental Science",
+      "Environmental Sciences"
+    ]
+  },
+  "Food Science and Technology": {
+    "aliases": [
+      "Food Technology",
+      "Food Sciences"
+    ],
+    "related_fields": [
+      "Agriculture Sciences",
+      "Agriculture",
+      "Agricultural Sciences",
+      "Chemistry",
+      "Applied Chemistry",
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences"
+    ]
+  },
+  "Medicine": {
+    "aliases": [
+      "MBBS",
+      "General Medicine"
+    ],
+    "related_fields": [],
+    "note": "Deliberately no related fields — MBBS is a hard credential gate. A foreign 'MD' is a different credentialing system and must NOT be treated as equivalent or related."
+  },
+  "Dentistry": {
+    "aliases": [
+      "BDS",
+      "MDS",
+      "Dental Surgery"
+    ],
+    "related_fields": []
+  },
+  "Pharmacy": {
+    "aliases": [
+      "PharmD",
+      "Pharm.D",
+      "B.Pharm",
+      "BPharm",
+      "Pharmaceutical Sciences"
+    ],
+    "related_fields": [
+      "Chemistry",
+      "Applied Chemistry",
+      "Biochemistry"
+    ]
+  },
+  "Veterinary Medicine": {
+    "aliases": [
+      "DVM",
+      "Veterinary Sciences"
+    ],
+    "related_fields": [
+      "Animal Sciences",
+      "Animal Science",
+      "Animal Husbandry"
+    ]
+  },
+  "Animal Sciences": {
+    "aliases": [
+      "Animal Science",
+      "Animal Husbandry"
+    ],
+    "related_fields": [
+      "Veterinary Medicine",
+      "DVM",
+      "Veterinary Sciences",
+      "Agriculture Sciences",
+      "Agriculture",
+      "Agricultural Sciences"
+    ]
+  },
+  "Nursing": {
+    "aliases": [
+      "BSN",
+      "BScN",
+      "Post RN BScN",
+      "Generic BScN",
+      "Registered Nurse Diploma"
+    ],
+    "related_fields": [
+      "Public Health",
+      "MPH",
+      "Community Health Sciences"
+    ]
+  },
+  "Physical Therapy": {
+    "aliases": [
+      "DPT",
+      "Physiotherapy",
+      "Physical Therapy and Rehabilitation"
+    ],
+    "related_fields": [
+      "Sports Sciences",
+      "Sport Sciences",
+      "Sports Science",
+      "Exercise Science",
+      "Kinesiology"
+    ],
+    "note": "DPT is the current standard entry credential in Pakistan; 'Physiotherapy' is used interchangeably with 'Physical Therapy' — kept as an alias, not a related field."
+  },
+  "Sports Sciences": {
+    "aliases": [
+      "Sport Sciences",
+      "Sports Science",
+      "Exercise Science",
+      "Kinesiology"
+    ],
+    "related_fields": [
+      "Physical Therapy",
+      "DPT",
+      "Physiotherapy",
+      "Physical Therapy and Rehabilitation"
+    ]
+  },
+  "Medical Laboratory Science": {
+    "aliases": [
+      "MLT",
+      "Medical Laboratory Technology",
+      "Clinical Laboratory Science",
+      "Biomedical Laboratory Science"
+    ],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Microbiology"
+    ]
+  },
+  "Public Health": {
+    "aliases": [
+      "MPH",
+      "Community Health Sciences"
+    ],
+    "related_fields": [
+      "Nursing",
+      "BSN",
+      "BScN",
+      "Post RN BScN",
+      "Generic BScN",
+      "Registered Nurse Diploma",
+      "Healthcare Management",
+      "MHA",
+      "MHM",
+      "Hospital Administration",
+      "Health Administration"
+    ]
+  },
+  "Healthcare Management": {
+    "aliases": [
+      "MHA",
+      "MHM",
+      "Hospital Administration",
+      "Health Administration"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Public Health",
+      "MPH",
+      "Community Health Sciences"
+    ]
+  },
+  "Law": {
+    "aliases": [
+      "LLB",
+      "LLM",
+      "BCL"
+    ],
+    "related_fields": []
+  },
+  "Political Science": {
+    "aliases": [
+      "Politics"
+    ],
+    "related_fields": [
+      "International Relations",
+      "IR",
+      "Public Administration",
+      "MPA",
+      "Public Policy"
+    ]
+  },
+  "International Relations": {
+    "aliases": [
+      "IR"
+    ],
+    "related_fields": [
+      "Political Science",
+      "Politics",
+      "Public Administration",
+      "MPA",
+      "Public Policy"
+    ]
+  },
+  "Islamic Studies": {
+    "aliases": [],
+    "related_fields": []
+  },
+  "Library and Information Science": {
+    "aliases": [
+      "Library Science"
+    ],
+    "related_fields": [
+      "Information Management"
+    ]
+  },
+  "Education": {
+    "aliases": [
+      "B.Ed",
+      "M.Ed",
+      "Elementary Education",
+      "Secondary Education"
+    ],
+    "related_fields": [
+      "Psychology",
+      "Applied Psychology",
+      "Clinical Psychology"
+    ]
+  },
+  "Psychology": {
+    "aliases": [
+      "Applied Psychology",
+      "Clinical Psychology"
+    ],
+    "related_fields": [
+      "Sociology",
+      "Social Sciences",
+      "Anthropology and Sociology",
+      "Education",
+      "B.Ed",
+      "M.Ed",
+      "Elementary Education",
+      "Secondary Education"
+    ]
+  },
+  "Sociology": {
+    "aliases": [
+      "Social Sciences",
+      "Anthropology and Sociology"
+    ],
+    "related_fields": [
+      "Psychology",
+      "Applied Psychology",
+      "Clinical Psychology",
+      "Public Administration",
+      "MPA",
+      "Public Policy"
+    ]
+  },
+  "Geography": {
+    "aliases": [],
+    "related_fields": [
+      "Environmental Science",
+      "Environmental Sciences",
+      "Urban and Regional Planning",
+      "Urban Planning",
+      "Town Planning"
+    ]
+  },
+  "English Literature": {
+    "aliases": [
+      "English",
+      "Linguistics"
+    ],
+    "related_fields": [
+      "Mass Communication",
+      "Mass Comm",
+      "MMC",
+      "BMC",
+      "Mass Communications",
+      "Media Studies",
+      "Journalism",
+      "Journalism and Mass Communication"
+    ]
+  },
+  "Fine Arts": {
+    "aliases": [
+      "BFA",
+      "MFA",
+      "Visual Arts",
+      "Studio Arts"
+    ],
+    "related_fields": [
+      "Design",
+      "BDes",
+      "B.Des",
+      "Communication Design",
+      "Product Design",
+      "Graphic Design"
+    ]
+  },
+  "Design": {
+    "aliases": [
+      "BDes",
+      "B.Des",
+      "Communication Design",
+      "Product Design",
+      "Graphic Design"
+    ],
+    "related_fields": [
+      "Fine Arts",
+      "BFA",
+      "MFA",
+      "Visual Arts",
+      "Studio Arts"
+    ]
+  },
+  "Fashion Design": {
+    "aliases": [],
+    "related_fields": [
+      "Design",
+      "BDes",
+      "B.Des",
+      "Communication Design",
+      "Product Design",
+      "Graphic Design",
+      "Fine Arts",
+      "BFA",
+      "MFA",
+      "Visual Arts",
+      "Studio Arts"
+    ]
+  },
+  "Mass Communication": {
+    "aliases": [
+      "Mass Comm",
+      "MMC",
+      "BMC",
+      "Mass Communications",
+      "Media Studies",
+      "Journalism",
+      "Journalism and Mass Communication"
+    ],
+    "related_fields": [
+      "Marketing",
+      "Digital Marketing",
+      "English Literature",
+      "English",
+      "Linguistics"
+    ]
+  },
+  "Marketing": {
+    "aliases": [
+      "Digital Marketing"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences",
+      "Mass Communication",
+      "Mass Comm",
+      "MMC",
+      "BMC",
+      "Mass Communications",
+      "Media Studies",
+      "Journalism",
+      "Journalism and Mass Communication"
+    ]
+  },
+  "Tourism and Hospitality Management": {
+    "aliases": [
+      "Hospitality Management",
+      "Tourism Management"
+    ],
+    "related_fields": [
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences"
+    ]
+  },
+  "Occupational Health and Safety": {
+    "aliases": [
+      "OHS",
+      "Workplace Health and Safety Promotion",
+      "Health and Safety Management"
+    ],
+    "related_fields": [
+      "Civil Engineering",
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering",
+      "Public Health",
+      "MPH",
+      "Community Health Sciences"
+    ],
+    "note": "Directly relevant to the seed data's Safety Officer job (BuildRight Construction), which requires 'Occupational Health and Safety, Civil Engineering' — this field was previously missing entirely."
+  },
+  "Botany": {
+    "aliases": [
+      "Plant Sciences"
+    ],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Agriculture Sciences",
+      "Agriculture",
+      "Agricultural Sciences"
+    ]
+  },
+  "Zoology": {
+    "aliases": [
+      "Animal Biology"
+    ],
+    "related_fields": [
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences",
+      "Veterinary Medicine",
+      "DVM",
+      "Veterinary Sciences"
+    ]
+  },
+  "Social Work": {
+    "aliases": [],
+    "related_fields": [
+      "Sociology",
+      "Social Sciences",
+      "Anthropology and Sociology",
+      "Psychology",
+      "Applied Psychology",
+      "Clinical Psychology"
+    ]
+  },
+  "Gender Studies": {
+    "aliases": [],
+    "related_fields": [
+      "Sociology",
+      "Social Sciences",
+      "Anthropology and Sociology",
+      "Social Work"
+    ]
+  },
+  "Criminology": {
+    "aliases": [
+      "Criminology and Security Studies"
+    ],
+    "related_fields": [
+      "Sociology",
+      "Social Sciences",
+      "Anthropology and Sociology",
+      "Law",
+      "LLB",
+      "LLM",
+      "BCL"
+    ]
+  },
+  "Environmental Engineering": {
+    "aliases": [
+      "Energy and Environmental Engineering"
+    ],
+    "related_fields": [
+      "Civil Engineering",
+      "BSCE",
+      "Civil Engineering Technology",
+      "Civil and Structural Engineering",
+      "Environmental Science",
+      "Environmental Sciences",
+      "Chemical Engineering",
+      "ChE",
+      "BSChE",
+      "Chemical and Process Engineering"
+    ]
+  },
+  "Geographic Information Systems": {
+    "aliases": [
+      "GIS"
+    ],
+    "related_fields": [
+      "Geography",
+      "Environmental Science",
+      "Environmental Sciences"
+    ]
+  },
+  "Geology": {
+    "aliases": [
+      "Applied Geology",
+      "Earth Sciences"
+    ],
+    "related_fields": [
+      "Environmental Science",
+      "Environmental Sciences",
+      "Mining Engineering"
+    ]
+  },
+  "Optometry": {
+    "aliases": [
+      "Optometry and Vision Sciences"
+    ],
+    "related_fields": [
+      "Medicine",
+      "MBBS",
+      "General Medicine"
+    ]
+  },
+  "Audiology": {
+    "aliases": [
+      "Speech and Hearing Sciences"
+    ],
+    "related_fields": [
+      "Medicine",
+      "MBBS",
+      "General Medicine",
+      "Physical Therapy",
+      "DPT",
+      "Physiotherapy",
+      "Physical Therapy and Rehabilitation"
+    ]
+  },
+  "Nutrition and Dietetics": {
+    "aliases": [
+      "Human Nutrition and Dietetics",
+      "Dietetics"
+    ],
+    "related_fields": [
+      "Public Health",
+      "MPH",
+      "Community Health Sciences",
+      "Food Science and Technology",
+      "Food Technology",
+      "Food Sciences"
+    ]
+  },
+  "Quality Management": {
+    "aliases": [
+      "Total Quality Management",
+      "TQM",
+      "Quality and Performance Management"
+    ],
+    "related_fields": [
+      "Industrial Engineering",
+      "IE",
+      "BSIE",
+      "Industrial and Manufacturing Engineering",
+      "Industrial Engineering and Management",
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences"
+    ]
+  },
+  "Information Management": {
+    "aliases": [],
+    "related_fields": [
+      "Library and Information Science",
+      "Library Science",
+      "Information Technology",
+      "IT",
+      "BSIT",
+      "Information Technologies",
+      "Information Systems",
+      "IS"
+    ]
+  },
+  "Archaeology": {
+    "aliases": [],
+    "related_fields": [
+      "History"
+    ]
+  },
+  "Philosophy": {
+    "aliases": [],
+    "related_fields": []
+  },
+  "History": {
+    "aliases": [],
+    "related_fields": [
+      "Pakistan Studies",
+      "Archaeology"
+    ]
+  },
+  "Pakistan Studies": {
+    "aliases": [],
+    "related_fields": [
+      "History",
+      "Political Science",
+      "Politics"
+    ]
+  },
+  "Islamic History": {
+    "aliases": [],
+    "related_fields": [
+      "History",
+      "Islamic Studies"
+    ],
+    "note": "Distinct combined program at some universities (e.g. University of Karachi) — not the same as either History or Islamic Studies alone, but draws from both."
+  },
+  "Urdu": {
+    "aliases": [
+      "Urdu Language and Literature"
+    ],
+    "related_fields": [
+      "English Literature",
+      "English",
+      "Linguistics"
+    ]
+  },
+  "French": {
+    "aliases": [
+      "French Language and Literature"
+    ],
+    "related_fields": []
+  },
+  "Persian": {
+    "aliases": [
+      "Farsi",
+      "Persian Language and Literature"
+    ],
+    "related_fields": []
+  },
+  "Arabic": {
+    "aliases": [
+      "Arabic Language and Literature"
+    ],
+    "related_fields": [
+      "Islamic Studies"
+    ]
+  },
+  "Punjabi": {
+    "aliases": [
+      "Punjabi Language and Literature"
+    ],
+    "related_fields": [
+      "Urdu",
+      "Urdu Language and Literature"
+    ]
+  },
+  "Kashmiri Studies": {
+    "aliases": [
+      "Kashmiriat",
+      "Kashmiri Language and Literature"
+    ],
+    "related_fields": [
+      "Urdu",
+      "Urdu Language and Literature"
+    ]
+  },
+  "Performing Arts": {
+    "aliases": [
+      "Musicology",
+      "Performing Arts and Musicology"
+    ],
+    "related_fields": [
+      "Fine Arts",
+      "BFA",
+      "MFA",
+      "Visual Arts",
+      "Studio Arts"
+    ]
+  },
+  "Space Science": {
+    "aliases": [],
+    "related_fields": [
+      "Physics",
+      "Applied Physics"
+    ]
+  },
+  "Nanotechnology": {
+    "aliases": [
+      "Nanoscience and Nanotechnology"
+    ],
+    "related_fields": [
+      "Physics",
+      "Applied Physics",
+      "Chemistry",
+      "Applied Chemistry",
+      "Metallurgical and Materials Engineering",
+      "Metallurgical Engineering",
+      "Materials Engineering",
+      "Materials Science"
+    ]
+  },
+  "Biophysics": {
+    "aliases": [],
+    "related_fields": [
+      "Physics",
+      "Applied Physics",
+      "Biology",
+      "Biological Sciences",
+      "Life Sciences"
+    ]
+  },
+  "Financial Mathematics": {
+    "aliases": [],
+    "related_fields": [
+      "Mathematics",
+      "Applied Mathematics",
+      "Math",
+      "Statistics",
+      "Stats",
+      "Applied Statistics",
+      "Accounting & Finance",
+      "A&F",
+      "Accounting and Finance",
+      "ACCA",
+      "CA",
+      "Chartered Accountancy",
+      "ICMA",
+      "CFA",
+      "CPA",
+      "CAT"
+    ]
+  },
+  "Computational Mathematics": {
+    "aliases": [],
+    "related_fields": [
+      "Mathematics",
+      "Applied Mathematics",
+      "Math",
+      "Computer Science",
+      "CS",
+      "BSCS",
+      "Computer Sciences",
+      "Computing Science",
+      "Computing"
+    ]
+  },
+  "Agribusiness Management": {
+    "aliases": [
+      "Agriculture and Agribusiness Management"
+    ],
+    "related_fields": [
+      "Agriculture Sciences",
+      "Agriculture",
+      "Agricultural Sciences",
+      "Business Administration",
+      "BBA",
+      "Business Studies",
+      "Business Management",
+      "Management Sciences"
+    ]
+  }
+}
