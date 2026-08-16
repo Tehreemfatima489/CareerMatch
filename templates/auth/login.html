@@ -1,0 +1,46 @@
+{% extends "base_auth.html" %}
+{% load static %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+{% block navbar %}
+<nav class="navbar">
+    <div class="logo"><span class="green">Career</span>Match</div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="login-card">
+    <h2>Login</h2>
+    <p class="subtitle">Enter your email and password to access your account.</p>
+
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST" action="/users/login/">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <p style="text-align: right; margin-top: -10px; margin-bottom: 16px;">
+    <a href="{% url 'forgot_password' %}" style="color: #4CAF50; font-size: 13px; text-decoration: none;">Forgot Password?</a>
+     </p>
+        <button type="submit" class="btn-login">Login</button>
+        <p class="register-text">Don't have an account?</p>
+        <div class="register-links">
+            <a href="/users/register/">Register as User</a>
+            <span>|</span>
+            <a href="/users/register-company/">Register as Company</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

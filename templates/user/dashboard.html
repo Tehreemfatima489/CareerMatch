@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-header">
+    <h1>Welcome Back 👋</h1>
+    <p>Here is your AI-powered career overview</p>
+</div>
+
+<!-- =========================
+     MATCHED JOBS
+========================= -->
+<section class="section">
+
+    <h2>Recommended Jobs</h2>
+
+    {% if matches %}
+
+        <div class="grid">
+
+            
+            {% for m in matches %}
+<div class="card job-card">
+
+    <div class="job-title">{{ m.job.title }}</div>
+    <div class="job-company">{{ m.job.company.company_name }}</div>
+
+    <div class="score">
+        Match Score: {{ m.score|floatformat:1 }}%
+    </div>
+
+    {% if m.job.id in invited_jobs %}
+        <div class="badge invited">Already Invited</div>
+    {% else %}
+        <div class="badge available">Available</div>
+    {% endif %}
+
+    <a href="{% url 'job_match_detail' m.id %}" class="btn btn-green detail-btn">
+        More Details →
+    </a>
+
+</div>
+{% endfor %}
+            
+
+        </div>
+
+    {% else %}
+        <p class="empty">No job matches yet. Improve your profile to get recommendations.</p>
+    {% endif %}
+
+</section>
+
+
+<!-- =========================
+     RECENT INVITES
+========================= -->
+<section class="section">
+
+    <h2>Recent Invitations</h2>
+
+    {% if recent_invites %}
+
+        <div class="invite-list">
+
+            {% for i in recent_invites %}
+            <div class="invite-card">
+
+                <div class="invite-info">
+                    <div class="title">{{ i.job.title }}</div>
+                    <div class="company">{{ i.job.company.company_name }}</div>
+                </div>
+
+                <div class="status {{ i.status }}">
+                    {{ i.status|title }}
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+        <p class="empty">No invitations received yet.</p>
+    {% endif %}
+
+</section>
+
+{% endblock %}

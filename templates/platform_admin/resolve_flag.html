@@ -1,0 +1,43 @@
+{% extends "platform_admin/base_admin.html" %}
+
+{% block admin_content %}
+
+<a href="{% url 'admin_feedback_queue' %}" class="back-link">← Back to feedback queue</a>
+
+<div class="mgmt-section" style="margin-top: 18px;">
+    <div class="mgmt-header">
+        <h3>Flagged Match</h3>
+    </div>
+
+    <div class="confirm-card" style="max-width: 100%; text-align: left; margin: 0;">
+        <p><strong>{{ flag.compatibility.job.title }}</strong> @ {{ flag.compatibility.job.company.company_name }}</p>
+        <p class="mgmt-sub">
+            Candidate: {{ flag.applicant.full_name }} ({{ flag.applicant.user.email }})
+            &middot; Overall score: {{ flag.compatibility.score|floatformat:0 }}%
+            (Skills {{ flag.compatibility.skill_score|floatformat:0 }}% ·
+            Edu {{ flag.compatibility.education_score|floatformat:0 }}% ·
+            Exp {{ flag.compatibility.experience_score|floatformat:0 }}%)
+        </p>
+        {% if flag.note %}
+        <div class="confirm-warning">Candidate's note: "{{ flag.note }}"</div>
+        {% endif %}
+
+        <p class="mgmt-sub" style="margin-top: 14px;">
+            Missing skills: {{ flag.compatibility.missing_skills|join:", "|default:"none" }}
+        </p>
+
+        <p style="margin-top: 18px; font-size: 13px; color: #666;">
+            To fix this match, use the same skill/education/experience feedback tools available
+            on the company-side candidate breakdown for this job — go to
+            <a href="{% url 'candidate_breakdown' flag.compatibility.job.id flag.applicant.id %}">this candidate's breakdown</a>
+            to submit and approve overrides directly, then return here to close out the flag.
+        </p>
+
+        <form method="post" style="margin-top: 20px;">
+            {% csrf_token %}
+            <button type="submit" class="btn-primary">Mark Resolved</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

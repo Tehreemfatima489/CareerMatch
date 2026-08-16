@@ -1,0 +1,546 @@
+/* ================================================
+   job_match_detail.css
+================================================ */
+
+.jmd-page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 16px 3rem;
+    font-size: 15px;
+    color: #222;
+}
+
+/* ── Header ─────────────────────────────────── */
+.jmd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.jmd-meta h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a7f37;
+    margin-bottom: 5px;
+}
+
+.jmd-meta .jmd-company {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.jmd-meta .jmd-company span {
+    color: #bbb;
+    margin: 0 6px;
+}
+.jmd-entry-tier {
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 0.85em;
+}
+
+.level-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 99px;
+    background: #e8f5e9;
+    color: #1a7f37;
+    border: 1px solid #c8e6c9;
+    text-transform: capitalize;
+}
+/* ── Flag match widget ───────────────────────── */
+.jmd-hidden { display: none; }
+
+.jmd-flag-widget {
+    margin-bottom: 1.25rem;
+}
+
+.jmd-flag-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.jmd-flag-toggle:hover {
+    border-color: #c62828;
+    color: #c62828;
+}
+
+.jmd-flag-form {
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+}
+
+.jmd-flag-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.jmd-flag-form label span {
+    font-weight: 400;
+    color: #999;
+}
+
+.jmd-flag-form textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.jmd-flag-form textarea:focus {
+    outline: none;
+    border-color: #1a7f37;
+}
+
+.jmd-flag-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.jmd-flag-submit {
+    background: #1a7f37;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.jmd-flag-submit:hover {
+    background: #14612a;
+}
+
+.jmd-flag-done {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.jmd-flag-done .jmd-icon {
+    color: #1a7f37;
+    font-style: normal;
+}
+
+/* ── Score circle ────────────────────────────── */
+.jmd-score-ring {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.jmd-score-circle {
+    width: 94px;
+    height: 94px;
+    border-radius: 50%;
+    border: 4px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.jmd-score-circle.green { border-color: #1a7f37; }
+.jmd-score-circle.amber { border-color: #b45309; }
+.jmd-score-circle.red   { border-color: #c62828; }
+
+.jmd-score-num {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.jmd-score-num.green { color: #1a7f37; }
+.jmd-score-num.amber { color: #b45309; }
+.jmd-score-num.red   { color: #c62828; }
+
+.jmd-score-pct {
+    font-size: 12px;
+    color: #888;
+    margin-top: 1px;
+}
+
+.jmd-score-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #777;
+    margin-top: 8px;
+}
+
+/* ── Invite banner ───────────────────────────── */
+.jmd-invite-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #e8f5e9;
+    color: #14612a;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.jmd-icon {
+    font-size: 15px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+/* ── Section card ────────────────────────────── */
+.jmd-section {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.jmd-section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafafa;
+}
+
+.jmd-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a7f37;
+    margin-bottom: 4px;
+}
+
+.jmd-section-sub {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.55;
+    max-width: 460px;
+}
+
+/* ── Score pill ──────────────────────────────── */
+.jmd-pill {
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 13px;
+    border-radius: 99px;
+    white-space: nowrap;
+    align-self: flex-start;
+    border: 1px solid transparent;
+}
+
+.jmd-pill.green { background: #e8f5e9; color: #1a7f37; border-color: #c8e6c9; }
+.jmd-pill.amber { background: #fdf1e0; color: #b45309; border-color: #f3d9a5; }
+.jmd-pill.red   { background: #fdeceb; color: #c62828; border-color: #f3c6c3; }
+
+/* ── Job details grid ─────────────────────────── */
+.jmd-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.jmd-detail-item {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+}
+
+.jmd-detail-item:nth-child(2n) {
+    border-right: none;
+}
+
+.jmd-detail-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.jmd-detail-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+}
+
+.jmd-detail-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.5;
+}
+
+.jmd-detail-muted {
+    font-weight: 400;
+    color: #999;
+    font-style: italic;
+}
+
+.jmd-status-active {
+    color: #1a7f37;
+}
+
+.jmd-status-closed {
+    color: #c62828;
+}
+
+/* ── Job description ─────────────────────────── */
+.jmd-desc-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: #fafafa;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+}
+
+.jmd-desc-chevron {
+    flex-shrink: 0;
+    font-size: 13px;
+    color: #888;
+    margin-top: 4px;
+    transition: transform 0.15s ease;
+}
+
+.jmd-desc-toggle.jmd-desc-open .jmd-desc-chevron {
+    transform: rotate(180deg);
+}
+
+.jmd-desc-body {
+    padding: 1.1rem 1.25rem;
+}
+
+.jmd-desc-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    white-space: normal;
+}
+
+/* ── Two-column compare grid ─────────────────── */
+.jmd-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.jmd-col {
+    padding: 1.1rem 1.25rem;
+}
+
+.jmd-col + .jmd-col {
+    border-left: 1px solid #f0f0f0;
+}
+
+.jmd-col-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+/* ── Skill chips ─────────────────────────────── */
+.jmd-chip-group {
+    margin-bottom: 14px;
+}
+
+.jmd-chip-group:last-child {
+    margin-bottom: 0;
+}
+
+.jmd-chip-row-label {
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.jmd-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.jmd-chip {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 11px;
+    border-radius: 99px;
+    border: 1px solid transparent;
+}
+
+.jmd-chip.green { background: #e8f5e9; color: #1a7f37; border-color: #c8e6c9; }
+.jmd-chip.red   { background: #fdeceb; color: #c62828; border-color: #f3c6c3; }
+.jmd-chip.blue  { background: #eaf1ff; color: #1d4ed8; border-color: #bfd3fb; }
+.jmd-chip.grey  { background: #f2f2f2; color: #555;    border-color: #e0e0e0; }
+
+/* ── Empty state ─────────────────────────────── */
+.jmd-empty {
+    font-size: 13px;
+    color: #999;
+    font-style: italic;
+}
+
+/* ── Education & experience entries ──────────── */
+.jmd-entry {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.jmd-entry:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.jmd-entry-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #222;
+}
+
+.jmd-entry-sub {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.jmd-entry-meta {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+/* ── Experience requirement block ────────────── */
+.jmd-req-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.jmd-req-years {
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    color: #222;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.jmd-total-yrs {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.jmd-total-yrs strong {
+    color: #222;
+    font-weight: 700;
+}
+
+.jmd-gap-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #fdf1e0;
+    border-left: 3px solid #b45309;
+    border-radius: 0 6px 6px 0;
+    font-size: 12.5px;
+    color: #7c3d09;
+}
+
+.jmd-meet-note {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #1a7f37;
+    font-weight: 600;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 600px) {
+    .jmd-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .jmd-compare {
+        grid-template-columns: 1fr;
+    }
+
+    .jmd-col + .jmd-col {
+        border-left: none;
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .jmd-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jmd-detail-item {
+        border-right: none;
+    }
+
+    .jmd-detail-item:nth-last-child(-n+2) {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .jmd-detail-item:last-child {
+        border-bottom: none;
+    }
+
+    .jmd-score-ring {
+        align-self: flex-end;
+    }
+}

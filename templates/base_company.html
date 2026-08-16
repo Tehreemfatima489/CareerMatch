@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CareerMatch - Company</title>
+
+    <link rel="stylesheet" href="{% static 'css/base_company.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        Career<span>Match</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="{% url 'post_job' %}">Post Job</a></li>
+        <li><a href="{% url 'manage_jobs' %}">Manage Jobs</a></li>
+        <a href="{% url 'sent_invitations' %}">Sent Invitations</a>
+       
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+
+</nav>
+
+<!-- PAGE CONTENT -->
+<div class="content">
+    
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

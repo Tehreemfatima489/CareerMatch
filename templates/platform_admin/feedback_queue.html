@@ -1,0 +1,110 @@
+{% extends "platform_admin/base_admin.html" %}
+
+{% block admin_content %}
+
+<div class="mgmt-section">
+    <div class="mgmt-header">
+        <h3>Skill Feedback</h3>
+        <span class="mgmt-count">{{ skill_pending|length }} pending</span>
+    </div>
+
+    <div class="mgmt-list">
+        {% for fb in skill_pending %}
+        <div class="mgmt-row fb-row">
+            <div class="mgmt-info">
+                <div class="mgmt-name">
+                    "{{ fb.user_skill_text }}" <span class="fb-vs">vs</span> "{{ fb.job_skill_text }}"
+                    <span class="fb-verdict {% if fb.judged_same %}same{% else %}diff{% endif %}">
+                        {% if fb.judged_same %}Marked same{% else %}Marked different{% endif %}
+                    </span>
+                </div>
+                <div class="mgmt-sub">
+                    {{ fb.job.title }} @ {{ fb.job.company.company_name }} &middot; candidate: {{ fb.applicant.full_name }}
+                    &middot; flagged {{ fb.created_at|timesince }} ago
+                </div>
+            </div>
+            <div class="fb-actions">
+                <form method="post" action="{% url 'resolve_skill_feedback' fb.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="decision" value="approve">
+                    <button type="submit" class="btn-primary">Approve</button>
+                </form>
+                <form method="post" action="{% url 'resolve_skill_feedback' fb.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="decision" value="reject">
+                    <button type="submit" class="btn-secondary">Reject</button>
+                </form>
+            </div>
+        </div>
+        {% empty %}
+        <p class="mgmt-empty">No pending skill feedback.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="mgmt-section">
+    <div class="mgmt-header">
+        <h3>Education &amp; Experience Feedback</h3>
+        <span class="mgmt-count">{{ title_pending|length }} pending</span>
+    </div>
+
+    <div class="mgmt-list">
+        {% for fb in title_pending %}
+        <div class="mgmt-row fb-row">
+            <div class="mgmt-info">
+                <div class="mgmt-name">
+                    "{{ fb.user_text }}" <span class="fb-vs">vs</span> "{{ fb.job_text }}"
+                    <span class="fb-verdict {% if fb.judged_same %}same{% else %}diff{% endif %}">
+                        {% if fb.judged_same %}Marked same{% else %}Marked different{% endif %}
+                    </span>
+                </div>
+                <div class="mgmt-sub">
+                    {{ fb.get_kind_display }} &middot; {{ fb.job.title }} @ {{ fb.job.company.company_name }}
+                    &middot; candidate: {{ fb.applicant.full_name }} &middot; flagged {{ fb.created_at|timesince }} ago
+                </div>
+            </div>
+            <div class="fb-actions">
+                <form method="post" action="{% url 'resolve_title_feedback' fb.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="decision" value="approve">
+                    <button type="submit" class="btn-primary">Approve</button>
+                </form>
+                <form method="post" action="{% url 'resolve_title_feedback' fb.id %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="decision" value="reject">
+                    <button type="submit" class="btn-secondary">Reject</button>
+                </form>
+            </div>
+        </div>
+        {% empty %}
+        <p class="mgmt-empty">No pending education/experience feedback.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="mgmt-section">
+    <div class="mgmt-header">
+        <h3>Candidate-Flagged Matches</h3>
+        <span class="mgmt-count">{{ open_flags|length }} open</span>
+    </div>
+
+    <div class="mgmt-list">
+        {% for flag in open_flags %}
+        <div class="mgmt-row">
+            <div class="mgmt-info">
+                <div class="mgmt-name">{{ flag.compatibility.job.title }} @ {{ flag.compatibility.job.company.company_name }}</div>
+                <div class="mgmt-sub">
+                    candidate: {{ flag.applicant.full_name }} &middot; score {{ flag.compatibility.score|floatformat:0 }}%
+                    &middot; flagged {{ flag.created_at|timesince }} ago
+                    {% if flag.note %}&middot; "{{ flag.note }}"{% endif %}
+                </div>
+            </div>
+            <a href="{% url 'resolve_match_flag' flag.id %}" class="btn-secondary">Review</a>
+        </div>
+        {% empty %}
+        <p class="mgmt-empty">No open candidate flags.</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

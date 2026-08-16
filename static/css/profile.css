@@ -1,0 +1,279 @@
+/* =========================
+   PROFILE HEADER
+========================= */
+
+.profile-header {
+    margin-bottom: 25px;
+}
+
+.profile-header h1 {
+    color: #1a7f37;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 100%;
+    background: #1a7f37;
+    transition: 0.3s ease;
+}
+
+.progress-text {
+    margin-top: 5px;
+    color: #666;
+}
+
+/* =========================
+   CARD LAYOUT
+========================= */
+
+.card {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #1a7f37;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+input[type="checkbox"] {
+    width: auto;
+    margin: 10px 0;
+}
+
+.inline-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-item {
+    background: #e8f5e9;
+    color: #1a7f37;
+    padding: 6px 10px;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.remove {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+   EDUCATION / EXPERIENCE
+========================= */
+
+.item-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.exp-skills {
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-chip {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #1a7f37;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+.remove-btn {
+    color: red;
+    text-decoration: none;
+}
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.item-actions .edit-btn,
+.item-actions .remove-btn {
+    font-size: 16px;
+    font-weight: 600;
+}
+.item-box .item-actions .edit-btn {
+    color: #1a7f37;
+    text-decoration: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-green {
+    background: #1a7f37;
+    color: white;
+}
+
+.btn-green:hover {
+    background: #14612a;
+}
+
+.btn-danger {
+    background: #c62828;
+    color: white;
+    margin-top: 10px;
+}
+/* =========================
+   EDUCATION LEVEL BADGE
+========================= */
+
+.level-badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #1a7f37;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+/* =========================
+   CHECKBOX
+========================= */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.resume-upload {
+    margin: 12px 0;
+}
+
+.resume-label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.current-resume {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.current-resume a {
+    color: #1a7f37;
+    text-decoration: none;
+}
+
+.current-resume a:hover {
+    text-decoration: underline;
+}
+
+.visibility-card {
+    display: flex;
+}
+
+.visibility-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.visibility-text h2 {
+    margin-bottom: 4px;
+}
+
+.visibility-desc {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+.toggle-btn {
+    width: 50px;
+    height: 28px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.toggle-btn.on {
+    background: #1a7f37;
+}
+
+.toggle-btn.off {
+    background: #ccc;
+}
+
+.toggle-circle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.toggle-btn.on .toggle-circle {
+    transform: translateX(22px);
+}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit Experience{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="card">
+    <h2>Edit Experience</h2>
+
+    <form method="POST" action="{% url 'edit_experience' experience.id %}">
+        {% csrf_token %}
+
+        <input type="text" name="role" value="{{ experience.role }}" placeholder="Role" required>
+        <input type="text" name="company" value="{{ experience.company }}" placeholder="Company">
+        <input type="date" name="start_date" value="{{ experience.start_date|date:'Y-m-d' }}">
+        <input type="date" name="end_date" value="{{ experience.end_date|date:'Y-m-d' }}">
+
+        <input type="text" name="skills_used" value="{{ existing_skills }}" placeholder="Skills used (comma-separated)" required>
+
+        <label class="checkbox">
+            <input type="checkbox" name="is_current" {% if experience.is_current %}checked{% endif %}>
+            Currently working here
+        </label>
+
+        <button class="btn btn-green">Save Changes</button>
+        <a href="{% url 'profile' %}" class="btn btn-cancel">Cancel</a>
+    </form>
+</section>
+{% endblock %}

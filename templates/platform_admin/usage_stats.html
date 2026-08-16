@@ -1,0 +1,45 @@
+{% extends "platform_admin/base_admin.html" %}
+
+{% block admin_content %}
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <div class="stat-icon icon-users">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+        </div>
+        <div class="stat-value">{{ total_users }}</div>
+        <div class="stat-label">Total Users</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-companies">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="7" width="18" height="14" rx="1"></rect>
+                <path d="M9 21V11h6v10"></path>
+                <path d="M9 3h6v4H9z"></path>
+            </svg>
+        </div>
+        <div class="stat-value">{{ total_companies }}</div>
+        <div class="stat-label">Total Companies</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-icon icon-jobs">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+        </div>
+        <div class="stat-value">{{ total_jobs }}</div>
+        <div class="stat-label">Jobs Posted</div>
+    </div>
+
+</div>
+
+{% endblock %}

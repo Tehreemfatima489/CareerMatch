@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Edit Education{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="card">
+    <h2>Edit Education</h2>
+
+    <form method="POST" action="{% url 'edit_education' education.id %}">
+        {% csrf_token %}
+
+        <input type="text" name="degree" value="{{ education.degree }}" placeholder="Degree / Field" required>
+
+        <select name="degree_level" required>
+            {% for value, label in degree_level_choices %}
+                <option value="{{ value }}" {% if education.degree_level == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="text" name="institution" value="{{ education.institution }}" placeholder="Institution">
+        <input type="date" name="start_date" value="{{ education.start_date|date:'Y-m-d' }}">
+        <input type="date" name="end_date" value="{{ education.end_date|date:'Y-m-d' }}">
+
+        <button class="btn btn-green">Save Changes</button>
+        <a href="{% url 'profile' %}" class="btn btn-cancel">Cancel</a>
+    </form>
+</section>
+{% endblock %}

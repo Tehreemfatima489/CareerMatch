@@ -1,0 +1,112 @@
+{% extends "base_company.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/post_job.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="job-container">
+
+    <div class="job-card">
+
+        <h2 class="title">Post a New Job</h2>
+        <p class="subtitle">Fill all details to attract better ranked candidates</p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <!-- BASIC INFO -->
+            <div class="form-group">
+                <label>Job Title</label>
+                <input type="text" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label>Description</label>
+                <textarea name="description" rows="5" required></textarea>
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Level</label>
+                    <select name="level" required>
+                        <option value="entry">Entry</option>
+                        <option value="mid">Mid</option>
+                        <option value="senior">Senior</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" name="location" required>
+                </div>
+
+            </div>
+
+            <!-- NEW FIELDS FROM MODEL -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Experience Required (Years)</label>
+                    <input type="number" step="0.5" name="experience_required" value="0">
+                </div>
+
+                <div class="form-group">
+                    <label>Salary (Optional)</label>
+                    <input type="number" name="salary">
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label>Degree Level</label>
+                <select name="required_degree_level">
+                    <option value="">No specific requirement</option>
+                    {% for value, label in degree_level_choices %}
+                        <option value="{{ value }}" {% if form_data.required_degree_level == value %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>            
+
+            <div class="form-group">
+                <label>Education Required</label>
+                <input type="text" name="education_required" placeholder="e.g. Computer Science, Information Technology (comma separated fields)" value="{{ form_data.education_required|default:'' }}">
+            </div>
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="accept_related_education_fields"
+                        {% if form_data %}
+                            {% if form_data.accept_related_education_fields %}checked{% endif %}
+                        {% else %}
+                            checked
+                        {% endif %}>
+                    Accept related education fields 
+                </label>
+            </div>
+
+
+
+            <!-- SKILLS SECTION -->
+            <div class="form-group">
+                <label>Required Skills (comma separated) <span class="required-mark">*</span></label>
+                <input type="text" name="required_skills" placeholder="Python, Django, SQL" required value="{{ form_data.required_skills|default:'' }}">
+                
+            </div>
+
+            <div class="form-group">
+                <label>Optional Skills (comma separated)</label>
+                <input type="text" name="optional_skills" placeholder="Docker, AWS, Redis">
+            </div>
+
+            <button type="submit" class="btn-primary">Post Job</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

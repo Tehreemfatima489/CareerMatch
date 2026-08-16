@@ -1,0 +1,293 @@
+/* =========================
+   BASE CONTAINER
+========================= */
+
+.invites-container {
+    padding: 40px;
+    background: #fff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.invites-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.invites-header h1 {
+    font-size: 32px;
+    color: #1a1a1a;
+}
+
+.subtext {
+    color: #666;
+    font-size: 14px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.invites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.invite-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    transition: 0.25s ease;
+}
+
+.invite-card:hover {
+    transform: translateY(-4px);
+    border-color: #00a86b;
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.invite-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-title {
+    font-size: 18px;
+    color: #111;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status.accepted {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.status.declined {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* =========================
+   COMPANY
+========================= */
+
+.company {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* =========================
+   META INFO
+========================= */
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.label {
+    font-size: 12px;
+    color: #888;
+    display: block;
+}
+
+.value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #111;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    font-size: 13px;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s ease;
+}
+
+/* Green accent (your system color) */
+.accept {
+    background: #00a86b;
+    color: #fff;
+}
+
+.accept:hover {
+    background: #018a58;
+}
+
+.decline {
+    background: #f3f4f6;
+    color: #333;
+}
+
+.decline:hover {
+    background: #e5e7eb;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty {
+    text-align: center;
+    padding: 60px;
+    color: #777;
+}
+
+
+/* keep all your existing css, add these at the bottom */
+
+/* =========================
+   ALERT MESSAGES
+========================= */
+
+.alert-msg {
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.alert-msg.success { background: #d1fae5; color: #047857; }
+.alert-msg.error   { background: #fee2e2; color: #b91c1c; }
+
+/* =========================
+   ACCEPT FORM (slide-in)
+========================= */
+
+.accept-form {
+    display: none;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-top: 14px;
+}
+
+.accept-form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 13px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    color: #222;
+    transition: border-color 0.2s;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #00a86b;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* =========================
+   ACCEPTED RESPONSE DISPLAY
+========================= */
+
+.response-display {
+    margin-top: 12px;
+    background: #f0fdf4;
+    border-left: 3px solid #00a86b;
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+.response-display-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 4px;
+}
+
+.response-display-text {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.5;
+}
+.btn-details {
+    display: inline-block;
+    margin: 70px, 500px, 10px, 70px;
+    padding: 8px 14px;
+    background: #f3f4f6;
+    color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.btn-details:hover {
+    background: #e5e7eb;
+}

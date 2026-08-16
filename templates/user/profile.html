@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="profile-header">
+    <h1>Your Profile</h1>
+
+    <div class="progress-bar">
+        <div class="progress" style="width: {{ completion_percent }}%;"></div>
+    </div>
+
+    <p class="progress-text">{{ completion_percent }}% completed</p>
+</div>
+
+<section class="card visibility-card">
+    <div class="visibility-row">
+        <div class="visibility-text">
+            <h2>Open to Opportunities</h2>
+            <p class="visibility-desc">
+                {% if applicant.is_open_to_opportunities %}
+                    You are currently visible to companies in candidate rankings.
+                {% else %}
+                    You are currently hidden from company rankings. You can still view your own job matches.
+                {% endif %}
+            </p>
+        </div>
+
+        <form method="POST" action="{% url 'toggle_opportunities' %}">
+            {% csrf_token %}
+            <button type="submit" class="toggle-btn {% if applicant.is_open_to_opportunities %}on{% else %}off{% endif %}">
+                <span class="toggle-circle"></span>
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- =========================
+     BASIC INFO UPDATE
+========================= -->
+<section class="card">
+
+    <h2>Basic Information</h2>
+
+    <form method="POST" action="{% url 'update_personal_info' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <input type="text" name="full_name" value="{{ applicant.full_name }}" placeholder="Full Name">
+
+    <select name="current_level">
+        <option value="entry" {% if applicant.current_level == "entry" %}selected{% endif %}>Entry</option>
+        <option value="mid" {% if applicant.current_level == "mid" %}selected{% endif %}>Mid</option>
+        <option value="senior" {% if applicant.current_level == "senior" %}selected{% endif %}>Senior</option>
+    </select>
+
+    <div class="resume-upload">
+        <label class="resume-label">Resume (PDF only)</label>
+        {% if applicant.resume %}
+            <p class="current-resume">
+                Current: <a href="{{ applicant.resume.url }}" target="_blank">View Resume</a>
+            </p>
+        {% endif %}
+        <input type="file" name="resume" accept=".pdf">
+    </div>
+
+    <button type="submit" class="btn btn-green">Save Basic Info</button>
+</form>
+
+</section>
+
+
+<!-- =========================
+     SKILLS SECTION
+========================= -->
+<section class="card">
+
+    <h2>Skills</h2>
+
+    <div class="skill-list">
+        {% for skill in skills %}
+        <div class="skill-item">
+            {{ skill.name }}
+
+            <a href="{% url 'remove_skill' skill.id %}" class="remove">×</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <form method="POST" action="{% url 'add_skill' %}" class="inline-form">
+        {% csrf_token %}
+        <input type="text" name="skill_name" placeholder="Add new skill">
+        <button class="btn btn-green">Add</button>
+    </form>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION SECTION
+========================= -->
+<section class="card">
+
+    <h2>Education</h2>
+
+    {% for edu in educations %}
+    <div class="item-box">
+
+        <div>
+            <strong>{{ edu.degree }}</strong>
+            {% if edu.get_degree_level_display %}
+                <span class="level-badge">{{ edu.get_degree_level_display }}</span>
+            {% endif %}
+            <br>
+            <span>{{ edu.institution }}</span><br>
+            <small>{{ edu.start_date }} - {{ edu.end_date|default:"Present" }}</small>
+        </div>
+
+        <div class="item-actions">
+            <a href="{% url 'edit_education' edu.id %}" class="edit-btn">Edit</a>
+            <a href="{% url 'delete_education' edu.id %}" class="remove-btn">Delete</a>
+        </div>
+
+    </div>
+    {% endfor %}
+
+    <form method="POST" action="{% url 'add_education' %}">
+        {% csrf_token %}
+        <select name="degree_level" required>
+            <option value="" disabled selected>Select degree level</option>
+            {% for value, label in degree_level_choices %}
+                <option value="{{ value }}">{{ label }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="degree" placeholder="Degree / Field (e.g. Computer Science)" required>
+
+        
+
+        <input type="text" name="institution" placeholder="Institution">
+        <input type="date" name="start_date">
+        <input type="date" name="end_date">
+
+        <button class="btn btn-green">Add Education</button>
+    </form>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE SECTION
+========================= -->
+<section class="card">
+
+    <h2>Experience</h2>
+
+    {% for exp in experiences %}
+    <div class="item-box">
+
+        <div>
+            <strong>{{ exp.role }}</strong><br>
+            <span>{{ exp.company }}</span><br>
+            <small>{{ exp.start_date }} - {{ exp.end_date|default:"Present" }}</small>
+            {% if exp.skills_used.all %}
+            <div class="exp-skills">
+                {% for s in exp.skills_used.all %}
+                    <span class="skill-chip">{{ s.name }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="item-actions">
+            <a href="{% url 'edit_experience' exp.id %}" class="edit-btn">Edit</a>
+            <a href="{% url 'delete_experience' exp.id %}" class="remove-btn">Delete</a>
+        </div>
+
+    </div>
+    {% endfor %}
+
+    <form method="POST" action="{% url 'add_experience' %}">
+        {% csrf_token %}
+
+        <input type="text" name="role" placeholder="Role" required>
+        <input type="text" name="company" placeholder="Company">
+                <input type="text" name="skills_used" placeholder="Skills used (comma-separated, e.g. Python, Django, PostgreSQL)" required>
+
+        <input type="date" name="start_date">
+        <input type="date" name="end_date">
+
+        <label class="checkbox">
+            <input type="checkbox" name="is_current">
+            Currently working here
+        </label>
+
+        <button class="btn btn-green">Add Experience</button>
+    </form>
+
+</section>
+
+
+<!-- =========================
+     ACCOUNT ACTIONS
+========================= -->
+<section class="card danger">
+
+    <h2>Account Settings</h2>
+
+    <form method="POST" action="{% url 'change_password' %}">
+        {% csrf_token %}
+
+        <input type="password" name="current_password" placeholder="Current Password">
+        <input type="password" name="new_password" placeholder="New Password">
+        <input type="password" name="confirm_password" placeholder="Confirm Password">
+
+        <button class="btn btn-green">Change Password</button>
+    </form>
+
+    <form method="POST" action="{% url 'delete_account' %}">
+        {% csrf_token %}
+        <button class="btn btn-danger">Delete Account</button>
+    </form>
+
+</section>
+
+{% endblock %}

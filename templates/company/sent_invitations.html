@@ -1,0 +1,78 @@
+{% extends "base_company.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/sent_invitations.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-container">
+
+    <div class="header">
+        <h2>Sent Invitations</h2>
+        <p>Track the status of all interview invitations you've sent</p>
+    </div>
+
+    {% if grouped %}
+        <div class="job-groups">
+
+            {% for group in grouped %}
+            <details class="job-group" open>
+                <summary class="job-group-header">
+                    <span class="job-group-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        {{ group.job.title }}
+                    </span>
+                    <span class="job-group-right">
+                        <span class="job-group-count">{{ group.count }} invite{{ group.count|pluralize }}</span>
+                        <span class="chevron"></span>
+                    </span>
+                </summary>
+
+                <div class="invite-table">
+                    {% for inv in group.invites %}
+                    <div class="invite-row">
+
+                        <div class="invite-main">
+                            <div class="candidate-name">{{ inv.applicant.full_name }}</div>
+                            <div class="invite-meta">
+                                <span class="status {{ inv.status }}">{{ inv.status|title }}</span>
+                                <span class="sent-date">{{ inv.sent_at|date:"M d, Y" }}</span>
+                            </div>
+                        </div>
+
+                        {% if inv.message %}
+                        <div class="message-box">
+                            <div class="message-label">Your message</div>
+                            <p class="message-text">{{ inv.message }}</p>
+                        </div>
+                        {% endif %}
+
+                        {% if inv.status == "accepted" and inv.candidate_response %}
+                        <div class="response-box">
+                            <div class="response-label">Candidate Response</div>
+                            <p class="response-text">{{ inv.candidate_response }}</p>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </details>
+            {% endfor %}
+
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <h3>No invitations sent yet</h3>
+            <p>Invitations you send to candidates will appear here.</p>
+        </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}

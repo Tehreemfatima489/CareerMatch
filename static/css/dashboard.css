@@ -1,0 +1,156 @@
+/* =========================
+   DASHBOARD HEADER
+========================= */
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    color: #1a7f37;
+}
+
+.dashboard-header p {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+
+.section {
+    margin-top: 40px;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    color: #1a7f37;
+}
+
+/* =========================
+   JOB GRID
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* JOB CARD */
+.job-card {
+    transition: 0.2s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.job-company {
+    color: #666;
+    margin-top: 5px;
+}
+
+.score {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1a7f37;
+}
+
+/* BADGES */
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.available {
+    background: #e8f5e9;
+    color: #1a7f37;
+}
+
+.invited {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* =========================
+   INVITES LIST
+========================= */
+
+.invite-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.invite-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+.invite-card:hover {
+    background: #fafafa;
+}
+
+.invite-info .title {
+    font-weight: bold;
+}
+
+.invite-info .company {
+    color: #666;
+    font-size: 14px;
+}
+
+/* STATUS */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.accepted {
+    background: #e8f5e9;
+    color: #1a7f37;
+}
+
+.status.declined {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* EMPTY STATE */
+.empty {
+    color: #888;
+    font-style: italic;
+}
+
+.detail-btn {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 13px;
+}

@@ -1,0 +1,147 @@
+/* ── Shared auth layout ──────────────────────────────── */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+
+/* ── Page heading (register pages) ──────────────────── */
+.page-heading {
+    text-align: center;
+    margin: 40px 0 24px;
+}
+.page-heading h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.page-heading p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ── Cards ───────────────────────────────────────────── */
+.login-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 460px;
+}
+.login-card h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+.register-card {
+    background: #fff;
+    padding: 32px 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 420px;
+}
+
+/* ── Subtitle ─────────────────────────────────────────── */
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ── Form elements ───────────────────────────────────── */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.form-group input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+.form-group input:focus {
+    border-color: #4CAF50;
+}
+
+/* ── Buttons ─────────────────────────────────────────── */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #4CAF50;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn-login:hover { background: #45a049; }
+
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-register:hover { background: #45a049; }
+
+/* ── Footer links ────────────────────────────────────── */
+.register-text {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+}
+.register-links {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 13px;
+}
+.register-links a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 40px;
+}
+.login-link a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* ── Error message ───────────────────────────────────── */
+.error {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    font-size: 13px;
+}

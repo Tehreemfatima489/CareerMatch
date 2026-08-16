@@ -1,0 +1,327 @@
+{% extends "base_company.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/candidate_breakdown.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="applicant-page">
+
+  <a href="{% url 'view_applicants' job.id %}" class="back-link">← Back to candidates</a>
+
+  <div class="applicant-layout">
+
+    <!-- Left rail -->
+    <aside class="applicant-rail">
+
+      <div class="card">
+        <div class="avatar-circle">{{ applicant.full_name|first|upper }}</div>
+        <p class="applicant-name">{{ applicant.full_name }}</p>
+        <p class="applicant-email">{{ applicant.user.email }}</p>
+        <span class="badge grey">{{ applicant.get_current_level_display }}</span>
+      </div>
+
+      <div class="card">
+        <h3>Match score</h3>
+        {% if match.score >= 70 %}
+          <div class="score-value green">{{ match.score|floatformat:0 }}<span>%</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill green" style="width: {{ match.score }}%;"></div></div>
+        {% elif match.score >= 50 %}
+          <div class="score-value amber">{{ match.score|floatformat:0 }}<span>%</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill amber" style="width: {{ match.score }}%;"></div></div>
+        {% else %}
+          <div class="score-value red">{{ match.score|floatformat:0 }}<span>%</span></div>
+          <div class="score-bar-track"><div class="score-bar-fill red" style="width: {{ match.score }}%;"></div></div>
+        {% endif %}
+
+        <div class="subscore-row">
+          <div class="subscore">
+            <div class="subscore-value">{{ breakdown.skill.score|floatformat:0 }}%</div>
+            <div class="subscore-label">Skills</div>
+          </div>
+          <div class="subscore">
+            <div class="subscore-value">{{ breakdown.education.score|floatformat:0 }}%</div>
+            <div class="subscore-label">Edu</div>
+          </div>
+          <div class="subscore">
+            <div class="subscore-value">{{ breakdown.experience.score|floatformat:0 }}%</div>
+            <div class="subscore-label">Exp</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        {% if applicant.resume %}
+          <a href="{% url 'download_resume' applicant.id %}" class="btn btn-green btn-block" target="_blank" rel="noopener">↓ Download resume</a>
+        {% else %}
+          <span class="btn btn-disabled btn-block">No resume uploaded</span>
+        {% endif %}
+      </div>
+
+      <div class="card">
+        <p class="job-title">{{ job.title }}</p>
+        <p class="job-meta">{{ job.location }}</p>
+        <span class="badge grey">{{ job.get_level_display }}</span>
+      </div>
+
+    </aside>
+
+    <!-- Right panels -->
+    <div class="applicant-panels">
+
+      <!-- Skills -->
+      <div class="card">
+        <div class="panel-head">
+          <h3>Skills</h3>
+          <div class="panel-head-actions">
+            <span class="badge {% if breakdown.skill.score >= 70 %}green{% elif breakdown.skill.score >= 50 %}amber{% else %}red{% endif %}">
+              {{ breakdown.skill.score }}% &middot; {{ breakdown.skill.weight }}% weight
+            </span>
+            <button type="button" class="flag-toggle" onclick="document.getElementById('skill-fb-form').classList.toggle('fb-hidden')">
+              Flag a mismatch
+            </button>
+          </div>
+        </div>
+
+        <div class="split-two">
+          <div class="split-col">
+            {% if breakdown.skill.matched_required %}
+            <div class="chip-group">
+              <p class="chip-label">Has — required</p>
+              <div class="chip-row">
+                {% for s in breakdown.skill.matched_required %}<span class="chip green">{{ s }}</span>{% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if breakdown.skill.missing_required %}
+            <div class="chip-group">
+              <p class="chip-label">Missing — required</p>
+              <div class="chip-row">
+                {% for s in breakdown.skill.missing_required %}<span class="chip red">{{ s }}</span>{% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if not breakdown.skill.matched_required and not breakdown.skill.missing_required %}
+              <p class="empty-note">No required skills on this job.</p>
+            {% endif %}
+          </div>
+
+          <div class="split-col">
+            {% if breakdown.skill.matched_optional %}
+            <div class="chip-group">
+              <p class="chip-label">Has — optional</p>
+              <div class="chip-row">
+                {% for s in breakdown.skill.matched_optional %}<span class="chip blue">{{ s }}</span>{% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if breakdown.skill.bonus_skills %}
+            <div class="chip-group">
+              <p class="chip-label">Extra skills</p>
+              <div class="chip-row">
+                {% for s in breakdown.skill.bonus_skills %}<span class="chip grey">{{ s }}</span>{% endfor %}
+              </div>
+            </div>
+            {% endif %}
+
+            {% if not breakdown.skill.matched_optional and not breakdown.skill.bonus_skills %}
+              <p class="empty-note">No additional skills.</p>
+            {% endif %}
+          </div>
+        </div>
+        
+
+        <form id="skill-fb-form" method="post" action="{% url 'submit_skill_feedback' job.id applicant.id %}" class="fb-form fb-hidden">
+          {% csrf_token %}
+          <p class="fb-form-title">Tell us which skill was scored wrong</p>
+          <div class="fb-row">
+            <div class="fb-field">
+              <label>Candidate's skill</label>
+              <select name="user_skill" required>
+                <option value="" disabled selected>Select…</option>
+                {% for s in user_skills %}<option value="{{ s }}">{{ s }}</option>{% endfor %}
+              </select>
+            </div>
+            <div class="fb-field">
+              <label>Job's skill</label>
+              <select name="job_skill" required>
+                <option value="" disabled selected>Select…</option>
+                {% for s in all_job_skills %}<option value="{{ s }}">{{ s }}</option>{% endfor %}
+              </select>
+            </div>
+          </div>
+          <div class="fb-radio-row">
+            <label><input type="radio" name="judgment" value="same" required> These are the same skill</label>
+            <label><input type="radio" name="judgment" value="different"> These are different skills</label>
+          </div>
+          <button type="submit" class="fb-submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Experience -->
+      <div class="card">
+        <div class="panel-head">
+          <h3>Experience</h3>
+          <div class="panel-head-actions">
+            <span class="badge {% if breakdown.experience.score >= 70 %}green{% elif breakdown.experience.score >= 50 %}amber{% else %}red{% endif %}">
+              {{ breakdown.experience.score }}% &middot; {{ breakdown.experience.weight }}% weight
+            </span>
+            <button type="button" class="flag-toggle" onclick="document.getElementById('exp-fb-form').classList.toggle('fb-hidden')">
+              Flag a mismatch
+            </button>
+          </div>
+        </div>
+
+        <div class="split-two">
+          <div class="split-col">
+            <p class="chip-label">Candidate</p>
+            <div style="margin: 8px 0;">
+              <span class="stat-number">{{ breakdown.experience.total_years }}</span>
+              <span class="stat-unit">yrs total</span>
+            </div>
+
+            {% if job.experience_required > 0 %}
+              {% if breakdown.experience.exceeds %}
+                <span class="badge green">✓ Meets requirement</span>
+              {% elif breakdown.experience.gap > 0 %}
+                <span class="badge amber">{{ breakdown.experience.gap }} yr(s) short</span>
+              {% endif %}
+            {% else %}
+              <span class="badge grey">Entry-level role</span>
+            {% endif %}
+
+            <div style="margin-top: 14px;">
+              {% if relevant_experiences %}
+                {% for exp in relevant_experiences %}
+                <div class="entry">
+                  <p class="entry-title">{{ exp.role }}</p>
+                  <p class="entry-sub">{{ exp.company }}</p>
+                  <p class="entry-meta">
+                    {{ exp.start_date|date:"M Y" }} –
+                    {% if exp.is_current or not exp.end_date %}Present{% else %}{{ exp.end_date|date:"M Y" }}{% endif %}
+                    &middot; {{ exp.years }} yr(s)
+                  </p>
+                </div>
+                {% endfor %}
+              {% else %}
+                <p class="empty-note">No experience on the candidate's profile was counted toward this score.</p>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="split-col">
+            <p class="chip-label">Job requires</p>
+            {% if job.experience_required > 0 %}
+              <div style="margin: 8px 0;">
+                <span class="stat-number">{{ job.experience_required }}</span>
+                <span class="stat-unit">yrs</span>
+              </div>
+              <p class="req-text">{{ job.level|capfirst }}-level position</p>
+            {% else %}
+              <p class="req-text">No experience required. Open to fresh graduates.</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <form id="exp-fb-form" method="post" action="{% url 'submit_title_feedback' job.id applicant.id %}" class="fb-form fb-hidden">
+          {% csrf_token %}
+          <input type="hidden" name="kind" value="experience_role">
+          <input type="hidden" name="job_text" value="{{ job.title }}">
+          <p class="fb-form-title">Does this past role actually match "<strong>{{ job.title }}</strong>"?</p>
+          <div class="fb-field">
+            <label>Candidate's past role</label>
+            <select name="user_text" required>
+              <option value="" disabled selected>Select…</option>
+              {% for exp in applicant.experiences.all %}<option value="{{ exp.role }}">{{ exp.role }} — {{ exp.company }}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="fb-radio-row">
+            <label><input type="radio" name="judgment" value="same" required> This role matches the job</label>
+            <label><input type="radio" name="judgment" value="different"> This role does not match</label>
+          </div>
+          <button type="submit" class="fb-submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Education -->
+      <div class="card">
+        <div class="panel-head">
+          <h3>Education</h3>
+          <div class="panel-head-actions">
+            <span class="badge {% if breakdown.education.score >= 70 %}green{% elif breakdown.education.score >= 50 %}amber{% else %}red{% endif %}">
+              {{ breakdown.education.score }}% &middot; {{ breakdown.education.weight }}% weight
+            </span>
+            <button type="button" class="flag-toggle" onclick="document.getElementById('edu-fb-form').classList.toggle('fb-hidden')">
+              Flag a mismatch
+            </button>
+          </div>
+        </div>
+
+        <div class="split-two">
+          <div class="split-col">
+            <p class="chip-label">Candidate</p>
+            {% if matched_educations %}
+              {% for edu in matched_educations %}
+              <div class="entry">
+                <p class="entry-title">
+                  {{ edu.degree }}
+                  {% if edu.degree_level %}
+                    <span class="badge grey entry-badge">{{ edu.get_degree_level_display }}</span>
+                  {% endif %}
+                </p>
+                <p class="entry-sub">{{ edu.institution }}</p>
+                <p class="entry-meta">
+                  {{ edu.start_date|date:"Y" }} –
+                  {% if edu.end_date %}{{ edu.end_date|date:"Y" }}{% else %}Present{% endif %}
+                </p>
+              </div>
+              {% endfor %}
+            {% else %}
+              <p class="empty-note">No degree on the candidate's profile matched this job's education requirement.</p>
+            {% endif %}
+          </div>
+
+          <div class="split-col">
+            <p class="chip-label">Job requires</p>
+
+            {% if job.education_required %}
+              <p class="entry-title">
+                {{ job.education_required }}{% if job.accept_related_education_fields %} (or related field){% endif %}
+              </p>
+            {% elif not job.required_degree_level %}
+              <p class="empty-note">No requirement stated.</p>
+            {% endif %}
+            {% if job.required_degree_level %}
+              <span class="badge grey entry-badge">{{ job.get_required_degree_level_display }}</span>
+            {% endif %}
+          </div>
+        </div>
+
+        <form id="edu-fb-form" method="post" action="{% url 'submit_title_feedback' job.id applicant.id %}" class="fb-form fb-hidden">
+          {% csrf_token %}
+          <input type="hidden" name="kind" value="education_field">
+          <input type="hidden" name="job_text" value="{{ job.education_required }}">
+          <p class="fb-form-title">Does this degree actually match "<strong>{{ job.education_required }}</strong>"?</p>
+          <div class="fb-field">
+            <label>Candidate's degree</label>
+            <select name="user_text" required>
+              <option value="" disabled selected>Select…</option>
+              {% for edu in applicant.educations.all %}<option value="{{ edu.degree }}">{{ edu.degree }}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="fb-radio-row">
+            <label><input type="radio" name="judgment" value="same" required> This degree satisfies the requirement</label>
+            <label><input type="radio" name="judgment" value="different"> This degree does not satisfy it</label>
+          </div>
+          <button type="submit" class="fb-submit">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

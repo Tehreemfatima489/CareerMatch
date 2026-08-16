@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.page-container {
+    padding: 40px;
+}
+
+/* Header */
+.header h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #111;
+}
+
+.header p {
+    margin-top: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ===========================
+   Job groups (collapsible)
+=========================== */
+
+.job-groups {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.job-group {
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.job-group[open] {
+    border-color: #d1fae5;
+}
+
+.job-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    cursor: pointer;
+    background: #fafafa;
+    list-style: none;
+    user-select: none;
+}
+
+.job-group-header::-webkit-details-marker {
+    display: none;
+}
+
+.job-group-header:hover {
+    background: #f3f4f6;
+}
+
+.job-group-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+}
+
+.job-group-title svg {
+    color: #1d4ed8;
+    flex-shrink: 0;
+}
+
+.job-group-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.job-group-count {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6b7280;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.chevron {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #999;
+    border-bottom: 2px solid #999;
+    transform: rotate(-45deg);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.job-group[open] .chevron {
+    transform: rotate(45deg);
+}
+
+/* ===========================
+   Invite rows (nested inside group)
+=========================== */
+
+.invite-table {
+    padding: 16px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.invite-row {
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: 0.2s;
+    background: #fff;
+}
+
+.invite-row:hover {
+    border-color: #22c55e;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.invite-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.candidate-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+
+.invite-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+.status.pending {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.status.accepted {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.status.declined {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.sent-date {
+    font-size: 12px;
+    color: #999;
+}
+
+/* ===========================
+   Your message (company → candidate)
+=========================== */
+
+.message-box {
+    margin-top: 14px;
+    background: #f9fafb;
+    border-left: 3px solid #9ca3af;
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.message-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #6b7280;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.message-text {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===========================
+   Candidate response
+=========================== */
+
+.response-box {
+    margin-top: 14px;
+    background: #f0fdf4;
+    border-left: 3px solid #22c55e;
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+.response-label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #047857;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.response-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===========================
+   Empty state
+=========================== */
+
+.empty-state {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.empty-state h3 {
+    color: #111;
+}
+
+.empty-state p {
+    color: #666;
+}

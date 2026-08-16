@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_filters %}
+
+{% block title %}My Invites{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/my_invites.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="invites-container">
+
+    <div class="invites-header">
+        <h1>My Invites</h1>
+        <p class="subtext">Companies have invited you based on your profile match.</p>
+    </div>
+
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="alert-msg {{ msg.tags }}">{{ msg }}</div>
+        {% endfor %}
+    {% endif %}
+
+    {% if invites %}
+
+        <div class="invites-grid">
+
+            {% for invite in invites %}
+            <div class="invite-card" id="card-{{ invite.id }}">
+
+                <!-- TOP -->
+                <div class="invite-top">
+                    <h2 class="job-title">{{ invite.job.title }}</h2>
+                    <span class="status {{ invite.status }}">{{ invite.status|title }}</span>
+                </div>
+
+                <div class="company">{{ invite.job.company.company_name }}</div>
+
+                <!-- META -->
+                <div class="meta">
+                    <div>
+                        <span class="label">Compatibility Score</span>
+                        <span class="value">{{ invite.compatibility_score }}%</span>
+                    </div>
+                    <div>
+                        <span class="label">Sent</span>
+                        <span class="value">{{ invite.sent_at|date:"M d, Y" }}</span>
+                    </div>
+                </div>
+
+                <!-- VIEW DETAILS BUTTON -->
+                {% with comp_id=compatibility_map|get_item:invite.id %}
+                    {% if comp_id %}
+                        <a href="{% url 'job_match_detail' comp_id %}" class="btn-details">
+                            View Job Details &amp; Score Breakdown
+                        </a>
+                    {% endif %}
+                {% endwith %}
+
+                <!-- COMPANY MESSAGE -->
+                {% if invite.message %}
+                    <p class="message">"{{ invite.message }}"</p>
+                {% endif %}
+
+                <!-- ACCEPTED — show candidate's response -->
+                {% if invite.status == "accepted" and invite.candidate_response %}
+                    <div class="response-display">
+                        <div class="response-display-label">Your Response</div>
+                        <p class="response-display-text">{{ invite.candidate_response }}</p>
+                    </div>
+                {% endif %}
+
+                <!-- PENDING — action buttons -->
+                {% if invite.status == "pending" %}
+
+                    <div class="actions" id="actions-{{ invite.id }}">
+                        <button class="btn accept"
+                                onclick="showAcceptForm({{ invite.id }})">
+                            Accept
+                        </button>
+
+                        <form method="POST"
+                              action="{% url 'respond_to_invite' invite.id %}"
+                              style="margin:0;">
+                            {% csrf_token %}
+                            <input type="hidden" name="action" value="declined">
+                            <button type="submit" class="btn decline">Decline</button>
+                        </form>
+                    </div>
+
+                    <!-- ACCEPT FORM slides in on Accept click -->
+                    <div class="accept-form" id="accept-form-{{ invite.id }}">
+                        <form method="POST"
+                              action="{% url 'respond_to_invite' invite.id %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="action" value="accepted">
+
+                            <div class="form-group">
+                                <label class="form-label">Your Response</label>
+                                <textarea
+                                    name="candidate_response"
+                                    class="form-textarea"
+                                    rows="3"
+                                    placeholder="e.g. Thank you, I am interested in this opportunity..."></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn accept">Submit</button>
+                                <button type="button"
+                                        class="btn decline"
+                                        onclick="hideAcceptForm({{ invite.id }})">
+                                    Cancel
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                {% endif %}
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="empty">
+            <h3>No invites yet</h3>
+            <p>When companies shortlist you, they will appear here.</p>
+        </div>
+
+    {% endif %}
+
+</div>
+
+<script>
+function showAcceptForm(inviteId) {
+    document.getElementById("actions-" + inviteId).style.display = "none";
+    const form = document.getElementById("accept-form-" + inviteId);
+    form.style.display = "block";
+    setTimeout(() => form.classList.add("visible"), 10);
+}
+
+function hideAcceptForm(inviteId) {
+    const form = document.getElementById("accept-form-" + inviteId);
+    form.classList.remove("visible");
+    setTimeout(() => {
+        form.style.display = "none";
+        document.getElementById("actions-" + inviteId).style.display = "flex";
+    }, 300);
+}
+</script>
+
+{% endblock %}

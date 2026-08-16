@@ -1,0 +1,58 @@
+{% extends "platform_admin/base_admin.html" %}
+
+{% block admin_content %}
+
+<input type="text" id="mgmt-search" class="mgmt-search" placeholder="Search by name or email...">
+
+<div class="mgmt-section">
+    <div class="mgmt-header">
+        <h3>Users</h3>
+        <span class="mgmt-count">{{ applicants|length }} total</span>
+    </div>
+
+    <div class="mgmt-list">
+        {% for a in applicants %}
+        <div class="mgmt-row" data-search="{{ a.full_name|lower }} {{ a.user.email|lower }}">
+            <div class="mgmt-info">
+                <div class="mgmt-name">{{ a.full_name }}</div>
+                <div class="mgmt-sub">{{ a.user.email }}</div>
+            </div>
+            <a href="{% url 'admin_remove_user' a.id %}" class="btn-danger">Remove</a>
+        </div>
+        {% empty %}
+        <p class="mgmt-empty">No users yet.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="mgmt-section">
+    <div class="mgmt-header">
+        <h3>Companies</h3>
+        <span class="mgmt-count">{{ companies|length }} total</span>
+    </div>
+
+    <div class="mgmt-list">
+        {% for c in companies %}
+        <div class="mgmt-row" data-search="{{ c.company_name|lower }} {{ c.user.email|lower }}">
+            <div class="mgmt-info">
+                <div class="mgmt-name">{{ c.company_name }}</div>
+                <div class="mgmt-sub">{{ c.user.email }} · {{ c.jobs.count }} job{{ c.jobs.count|pluralize }} posted</div>
+            </div>
+            <a href="{% url 'admin_remove_company' c.id %}" class="btn-danger">Remove</a>
+        </div>
+        {% empty %}
+        <p class="mgmt-empty">No companies yet.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+document.getElementById("mgmt-search").addEventListener("keyup", function() {
+    const term = this.value.toLowerCase();
+    document.querySelectorAll(".mgmt-row").forEach(function(row) {
+        row.style.display = row.dataset.search.includes(term) ? "flex" : "none";
+    });
+});
+</script>
+
+{% endblock %}

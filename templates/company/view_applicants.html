@@ -1,0 +1,211 @@
+{% extends "base_company.html" %}
+{% load custom_filters %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/view_applicants.css' %}">
+
+{% endblock %}
+
+{% block content %}
+<div class="va-page">
+
+  <div class="va-header">
+    <a href="{% url 'manage_jobs' %}" class="va-back">← Back to jobs</a>
+    <h1>{{ job.title }}</h1>
+    <p>
+      {{ total_count }} candidate{{ total_count|pluralize }} ranked by compatibility
+      &middot; {{ job.location }}
+      &middot; {{ job.get_level_display }}
+    </p>
+  </div>
+
+  {% if candidates %}
+
+    <div class="va-rank-strip">
+      <span>Ranked by match score</span>
+      <span class="va-rank-line"></span>
+    </div>
+
+    <div class="va-list">
+      {% for c in candidates %}
+      {% with rank=candidates.start_index|add:forloop.counter0 %}
+
+        <div class="va-row {% if c.user.id in invited %}invited{% endif %}">
+
+          <!-- Rank -->
+          <div class="va-rank {% if rank <= 3 %}top{% endif %}">#{{ rank }}</div>
+
+          <!-- Info -->
+          <div class="va-info">
+
+            <div class="va-name-row">
+              <span class="va-name">{{ c.user.full_name }}</span>
+              {% if c.user.id in invited %}
+                {% with inv=invite_map|get_item:c.user.id %}
+                  <span class="va-status-badge {{ inv.status }}">{{ inv.status|capfirst }}</span>
+                {% endwith %}
+              {% endif %}
+            </div>
+
+            <div class="va-scores">
+              <span class="va-score-main {% if c.score >= 70 %}green{% elif c.score >= 50 %}amber{% else %}red{% endif %}">
+                {{ c.score|floatformat:0 }}%
+              </span>
+              <div class="va-score-subs">
+                <div class="va-sub">
+                  <span class="va-sub-val">{{ c.skill_score|floatformat:0 }}%</span>
+                  <span class="va-sub-key">Skills</span>
+                </div>
+                <div class="va-sub">
+                  <span class="va-sub-val">{{ c.education_score|floatformat:0 }}%</span>
+                  <span class="va-sub-key">Edu</span>
+                </div>
+                <div class="va-sub">
+                  <span class="va-sub-val">{{ c.experience_score|floatformat:0 }}%</span>
+                  <span class="va-sub-key">Exp</span>
+                  {% if c.exceeds_experience %}
+                    <span class="va-exceeds-tag" title="Candidate exceeds this job's experience requirement">Exceeds req.</span>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+
+            <div class="va-missing">
+              {% if c.missing_skills %}
+                <span class="va-missing-label">Missing:</span>
+                {% for skill in c.missing_skills|slice:":4" %}
+                  <span class="va-chip-red">{{ skill }}</span>
+                {% endfor %}
+                {% if c.missing_skills|length > 4 %}
+                  <span class="va-more">+{{ c.missing_skills|length|add:"-4" }} more</span>
+                {% endif %}
+              {% else %}
+                <span class="va-chip-good">✓ No skill gaps</span>
+              {% endif %}
+            </div>
+
+          </div>
+
+          <!-- Actions -->
+          <div class="va-actions">
+            <a href="{% url 'candidate_breakdown' job.id c.user.id %}" class="va-btn va-btn-ghost">
+              Breakdown
+            </a>
+            {% if c.user.id in invited %}
+              <button class="va-btn va-btn-done" disabled>Invited</button>
+            {% else %}
+              <button
+                type="button"
+                class="va-btn va-btn-primary"
+                data-job="{{ job.id }}"
+                data-applicant="{{ c.user.id }}"
+                data-name="{{ c.user.full_name|escapejs }}"
+                onclick="openModal(this)"
+              >
+                Invite
+              </button>
+            {% endif %}
+          </div>
+
+        </div>
+
+      {% endwith %}
+      {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if candidates.paginator.num_pages > 1 %}
+    <div class="va-pagination">
+      {% if candidates.has_previous %}
+        <a href="?page={{ candidates.previous_page_number }}" class="va-page-btn">← Prev</a>
+      {% else %}
+        <span class="va-page-btn disabled" tabindex="-1" aria-disabled="true">← Prev</span>
+      {% endif %}
+
+      <div class="va-page-numbers">
+        {% for num in candidates.paginator.page_range %}
+          {% if num == candidates.number %}
+            <span class="va-page-num current">{{ num }}</span>
+          {% elif num > candidates.number|add:"-3" and num < candidates.number|add:"3" %}
+            <a href="?page={{ num }}" class="va-page-num">{{ num }}</a>
+          {% elif num == 1 or num == candidates.paginator.num_pages %}
+            <a href="?page={{ num }}" class="va-page-num">{{ num }}</a>
+          {% elif num == candidates.number|add:"-3" or num == candidates.number|add:"3" %}
+            <span class="va-page-ellipsis">…</span>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      {% if candidates.has_next %}
+        <a href="?page={{ candidates.next_page_number }}" class="va-page-btn">Next →</a>
+      {% else %}
+        <span class="va-page-btn disabled" tabindex="-1" aria-disabled="true">Next →</span>
+      {% endif %}
+    </div>
+    {% endif %}
+
+  {% else %}
+    <div class="va-empty">
+      <h3>No candidates yet</h3>
+      <p>Scores are still being computed, or no one has cleared the match threshold.</p>
+    </div>
+  {% endif %}
+
+</div>
+
+<!-- Invite modal -->
+<div class="va-overlay" id="inviteOverlay">
+  <div class="va-modal">
+    <div class="va-modal-head">
+      <h3>Send interview invite</h3>
+      <p class="va-modal-candidate" id="modalName"></p>
+    </div>
+    <form id="inviteForm" method="POST">
+      {% csrf_token %}
+      <div class="va-modal-body">
+        <label class="va-modal-label" for="modalMsg">Message to candidate</label>
+        <textarea
+          id="modalMsg"
+          name="message"
+          class="va-modal-textarea"
+          placeholder="Write a short personal message..."
+        >We reviewed your profile and would love to tell you more about this opportunity. We think you'd be a great fit.</textarea>
+      </div>
+      <div class="va-modal-foot">
+        <button type="button" class="va-btn va-btn-ghost" onclick="closeModal()">Cancel</button>
+        <button type="submit" class="va-btn va-btn-primary">Send Invite</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Build URL template using Django's url tag into a JS variable
+  const inviteUrlTemplate = "{% url 'send_invite' job_id=job.id applicant_id=0 %}".replace('/0/', '/__APPLICANT__/');
+
+  function openModal(btn) {
+    const jobId      = btn.dataset.job;
+    const applicantId = btn.dataset.applicant;
+    const name       = btn.dataset.name;
+
+    document.getElementById('modalName').textContent = name;
+    document.getElementById('inviteForm').action = inviteUrlTemplate.replace('__APPLICANT__', applicantId);
+    document.getElementById('inviteOverlay').classList.add('open');
+    setTimeout(() => document.getElementById('modalMsg').focus(), 60);
+  }
+
+  function closeModal() {
+    document.getElementById('inviteOverlay').classList.remove('open');
+  }
+
+  document.getElementById('inviteOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
+{% endblock %}

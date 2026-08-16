@@ -1,0 +1,325 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_filters %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/job_match_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="jmd-page">
+
+  <!-- Header -->
+  <div class="jmd-header">
+    <div class="jmd-meta">
+      <h1>{{ job.title }}</h1>
+      <p class="jmd-company">
+        {{ job.company.company_name }}
+        <span>&middot;</span>
+        {{ job.location }}
+      </p>
+      <span class="level-badge">{{ job.get_level_display }}</span>
+    </div>
+    <div class="jmd-score-ring">
+      <div class="jmd-score-circle {{ overall_color }}">
+        <span class="jmd-score-num {{ overall_color }}">{{ match.score|floatformat:0 }}</span>
+        <span class="jmd-score-pct">%</span>
+      </div>
+      <p class="jmd-score-label">Overall match</p>
+    </div>
+  </div>
+
+  <!-- Flag match widget -->
+  {% if not is_flagged %}
+  <div class="jmd-flag-widget">
+    <button type="button" class="jmd-flag-toggle" onclick="document.getElementById('jmd-flag-form').classList.toggle('jmd-hidden')">
+      <span class="jmd-icon" aria-hidden="true">⚑</span> Something look off with this match?
+    </button>
+
+    <form id="jmd-flag-form" method="post" action="{% url 'flag_match' match.id %}" class="jmd-flag-form jmd-hidden">
+      {% csrf_token %}
+      <label for="flag-note">Tell us what seems wrong <span>(optional)</span></label>
+      <textarea id="flag-note" name="note" rows="3" placeholder="e.g. My React Native experience wasn't counted as relevant to this role"></textarea>
+      <div class="jmd-flag-actions">
+        <button type="submit" class="jmd-flag-submit">Submit feedback</button>
+      </div>
+    </form>
+  </div>
+  {% else %}
+  <div class="jmd-flag-widget jmd-flag-done">
+    <span class="jmd-icon" aria-hidden="true">✓</span>
+    You've already flagged this match — our team is reviewing it.
+  </div>
+  {% endif %}
+
+ 
+
+  <!-- Invite banner -->
+  {% if is_invited %}
+  <div class="jmd-invite-banner">
+    <span class="jmd-icon" aria-hidden="true">✉</span>
+    You have been invited to interview for this role.
+  </div>
+  {% endif %}
+
+  <!-- Job details -->
+  <div class="jmd-section">
+    <div class="jmd-section-head">
+      <div>
+        <p class="jmd-section-title">Job details</p>
+        <p class="jmd-section-sub">Key facts about this role at a glance.</p>
+      </div>
+    </div>
+
+    <div class="jmd-details-grid">
+      <div class="jmd-detail-item">
+        <p class="jmd-detail-label">Location</p>
+        <p class="jmd-detail-value">{{ job.location|default:"Not specified" }}</p>
+      </div>
+
+      <div class="jmd-detail-item">
+        <p class="jmd-detail-label">Salary</p>
+        {% if job.salary %}
+          <p class="jmd-detail-value">{{ job.salary|floatformat:0 }}</p>
+        {% else %}
+          <p class="jmd-detail-value jmd-detail-muted">Not disclosed</p>
+        {% endif %}
+      </div>
+
+      <div class="jmd-detail-item">
+        <p class="jmd-detail-label">Level</p>
+        <p class="jmd-detail-value">{{ job.get_level_display }}</p>
+      </div>
+
+      {% if job.required_credential %}
+      <div class="jmd-detail-item">
+        <p class="jmd-detail-label">Required credential</p>
+        <p class="jmd-detail-value">{{ job.required_credential }}</p>
+      </div>
+      {% endif %}
+
+      <div class="jmd-detail-item">
+        <p class="jmd-detail-label">Posted</p>
+        <p class="jmd-detail-value">{{ job.created_at|date:"M j, Y" }}</p>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- Job description -->
+  <div class="jmd-section">
+    <button type="button" class="jmd-desc-toggle" onclick="document.getElementById('jmd-desc-body').classList.toggle('jmd-hidden'); this.classList.toggle('jmd-desc-open')">
+      <span>
+        <p class="jmd-section-title">Job description</p>
+        <p class="jmd-section-sub">What {{ job.company.company_name }} is looking for in this role.</p>
+      </span>
+      <span class="jmd-desc-chevron" aria-hidden="true">&#9662;</span>
+    </button>
+
+    <div id="jmd-desc-body" class="jmd-desc-body">
+      {% if job.description %}
+        <p class="jmd-desc-text">{{ job.description|linebreaksbr }}</p>
+      {% else %}
+        <p class="jmd-empty">No description was provided for this job.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="jmd-section">
+    <div class="jmd-section-head">
+      <div>
+        <p class="jmd-section-title">Skills</p>
+        <p class="jmd-section-sub">{{ skill.explanation }}</p>
+      </div>
+      <span class="jmd-pill {{ skill.color }}">{{ skill.score }}% match</span>
+    </div>
+
+    <div class="jmd-compare">
+      <div class="jmd-col">
+        <p class="jmd-col-label">Job requires</p>
+
+        {% if skill.matched_required %}
+        <div class="jmd-chip-group">
+          <p class="jmd-chip-row-label">
+            <span class="jmd-icon" style="color:#1a7f37" aria-hidden="true">✓</span> You have
+          </p>
+          <div class="jmd-chips">
+            {% for s in skill.matched_required %}
+            <span class="jmd-chip green">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if skill.missing_required %}
+        <div class="jmd-chip-group">
+          <p class="jmd-chip-row-label">
+            <span class="jmd-icon" style="color:#c62828" aria-hidden="true">✕</span> Missing
+          </p>
+          <div class="jmd-chips">
+            {% for s in skill.missing_required %}
+            <span class="jmd-chip red">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if not skill.matched_required and not skill.missing_required %}
+        <p class="jmd-empty">No required skills listed for this job.</p>
+        {% endif %}
+      </div>
+
+      <div class="jmd-col">
+        <p class="jmd-col-label">Your profile</p>
+
+        {% if skill.matched_optional %}
+        <div class="jmd-chip-group">
+          <p class="jmd-chip-row-label">
+            <span class="jmd-icon" style="color:#1d4ed8" aria-hidden="true">★</span> Bonus — optional skills you have
+          </p>
+          <div class="jmd-chips">
+            {% for s in skill.matched_optional %}
+            <span class="jmd-chip blue">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if skill.missing_optional %}
+        <div class="jmd-chip-group">
+          <p class="jmd-chip-row-label">Nice-to-have (you don't have)</p>
+          <div class="jmd-chips">
+            {% for s in skill.missing_optional %}
+            <span class="jmd-chip grey">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if skill.bonus_skills %}
+        <div class="jmd-chip-group">
+          <p class="jmd-chip-row-label">Not listed in this job</p>
+          <div class="jmd-chips">
+            {% for s in skill.bonus_skills %}
+            <span class="jmd-chip grey">{{ s }}</span>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if not skill.matched_optional and not skill.missing_optional and not skill.bonus_skills %}
+        <p class="jmd-empty">No optional skills listed for this job.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="jmd-section">
+    <div class="jmd-section-head">
+      <div>
+        <p class="jmd-section-title">Education</p>
+        <p class="jmd-section-sub">{{ education.explanation }}</p>
+      </div>
+      <span class="jmd-pill {{ education.color }}">{{ education.score }}% match</span>
+    </div>
+
+    <div class="jmd-compare">
+      <div class="jmd-col">
+        <p class="jmd-col-label">Job requires</p>
+        {% if job.education_required %}
+          <p class="jmd-entry-title">
+            {{ job.education_required }}{% if job.accept_related_education_fields %} (or related field){% endif %}
+          </p>
+        {% endif %}
+
+        {% if education.required_degree_level %}
+          <p class="jmd-entry-meta">Minimum degree level: <strong>{{ education.required_degree_level }}</strong></p>
+        {% endif %}
+
+        {% if not job.education_required and not education.required_degree_level %}
+          <p class="jmd-empty">No requirement stated.</p>
+        {% endif %}
+      </div>
+
+      <div class="jmd-col">
+        <p class="jmd-col-label">Your education</p>
+        {% if education.user_educations %}
+          {% for edu in education.user_educations %}
+          <div class="jmd-entry">
+            <p class="jmd-entry-title">{{ edu.degree }}{% if edu.degree_level %} <span class="jmd-entry-tier">({{ edu.degree_level }})</span>{% endif %}</p>
+            <p class="jmd-entry-sub">{{ edu.institution }}</p>
+            <p class="jmd-entry-meta">
+              {{ edu.start_date|date:"Y" }} –
+              {% if edu.is_ongoing %}Present{% else %}{{ edu.end_date|date:"Y" }}{% endif %}
+              &middot; {{ edu.duration_years }} yrs
+            </p>
+          </div>
+          {% endfor %}
+        {% else %}
+          <p class="jmd-empty">None of the education on your profile matched this job's requirement.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div class="jmd-section">
+    <div class="jmd-section-head">
+      <div>
+        <p class="jmd-section-title">Experience</p>
+        <p class="jmd-section-sub">{{ experience.explanation }}</p>
+      </div>
+      <span class="jmd-pill {{ experience.color }}">{{ experience.score }}% match</span>
+    </div>
+
+    <div class="jmd-compare">
+      <div class="jmd-col">
+        <p class="jmd-col-label">Job requires</p>
+        {% if experience.required_years > 0 %}
+          <p class="jmd-req-text">
+            <span class="jmd-req-years">{{ experience.required_years }}</span>
+            years of relevant experience
+          </p>
+          {% if experience.exceeds_requirement %}
+          <p class="jmd-meet-note">
+            <span class="jmd-icon" aria-hidden="true">✓</span>
+            You meet or exceed this requirement.
+          </p>
+          {% elif experience.years_gap > 0 %}
+          <p class="jmd-gap-note">
+            <span class="jmd-icon" aria-hidden="true">⚠</span>
+            You are about <strong>&nbsp;{{ experience.years_gap }} yr(s)&nbsp;</strong> short of the requirement.
+          </p>
+          {% endif %}
+        {% else %}
+          <p class="jmd-req-text">No experience required — open to fresh graduates.</p>
+        {% endif %}
+      </div>
+
+      <div class="jmd-col">
+        <p class="jmd-col-label">Your experience</p>
+        {% if experience.user_experiences %}
+          <p class="jmd-total-yrs">Total: <strong>{{ experience.total_years }} years</strong></p>
+          {% for exp in experience.user_experiences %}
+          <div class="jmd-entry">
+            <p class="jmd-entry-title">{{ exp.role }}</p>
+            <p class="jmd-entry-sub">{{ exp.company }}</p>
+            <p class="jmd-entry-meta">
+              {{ exp.start_date|date:"M Y" }} –
+              {% if exp.is_ongoing %}Present{% else %}{{ exp.end_date|date:"M Y" }}{% endif %}
+              &middot; {{ exp.years }} yr(s)
+            </p>
+          </div>
+          {% endfor %}
+        {% else %}
+          <p class="jmd-empty">None of the experience on your profile was counted as relevant to this role.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

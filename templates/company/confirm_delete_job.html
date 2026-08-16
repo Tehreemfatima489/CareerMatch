@@ -1,0 +1,23 @@
+{% extends "base_company.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/manage_jobs.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-container">
+    <div class="header">
+        <h2>Delete Job</h2>
+        <p>Are you sure you want to delete "{{ job.title }}"? This action cannot be undone, and all associated candidate matches and invitations will be removed.</p>
+    </div>
+
+    <form method="POST" style="margin-top: 20px;">
+        {% csrf_token %}
+        <button type="submit" class="btn-danger" style="padding: 10px 20px; font-size: 14px;">Yes, Delete Job</button>
+        <a href="{% url 'manage_jobs' %}" class="btn-secondary" style="padding: 10px 20px; font-size: 14px;">Cancel</a>
+    </form>
+</div>
+
+{% endblock %}

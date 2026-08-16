@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+<div class="admin-shell">
+
+    <div class="admin-topbar">
+        <div class="admin-title">Admin Dashboard</div>
+        <nav class="admin-tabs">
+    <a href="{% url 'admin_dashboard' %}" class="admin-tab {% if request.resolver_match.url_name == 'admin_dashboard' %}active{% endif %}">System Usage</a>
+    <a href="{% url 'admin_management' %}" class="admin-tab {% if request.resolver_match.url_name == 'admin_management' %}active{% endif %}">Management</a>
+    <a href="{% url 'admin_feedback_queue' %}" class="admin-tab {% if request.resolver_match.url_name == 'admin_feedback_queue' %}active{% endif %}">Feedback</a>
+    <a class="logout-btn" href="{% url 'logout' %}">Logout</a>
+</nav>
+    </div>
+
+    <div class="admin-body">
+        {% block admin_content %}{% endblock %}
+    </div>
+
+</div>
+
+</body>
+</html>

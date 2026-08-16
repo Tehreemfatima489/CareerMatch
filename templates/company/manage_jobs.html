@@ -1,0 +1,86 @@
+{% extends "base_company.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/manage_jobs.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="mj-page">
+
+    <div class="mj-header">
+        <div>
+            <h1>Manage jobs</h1>
+            <p>{{ jobs|length }} job{{ jobs|length|pluralize }} posted</p>
+        </div>
+        <a href="{% url 'post_job' %}" class="mj-btn-new">
+            <span class="mj-plus">+</span> Post a job
+        </a>
+    </div>
+
+    {% if jobs %}
+
+        <div class="mj-list-head">
+            
+            <span class="mj-col-actions"></span>
+        </div>
+
+        <div class="mj-list">
+            {% for job in jobs %}
+                <div class="mj-row {% if not job.is_active %}is-closed{% endif %}">
+
+                    <div class="mj-status-rail" title="{% if job.is_active %}Open{% else %}Closed{% endif %}"></div>
+
+                    <div class="mj-job-info">
+                        <div class="mj-title-row">
+                            <span class="mj-title">{{ job.title }}</span>
+                            <span class="mj-level">{{ job.get_level_display }}</span>
+                            {% if not job.is_active %}
+                                <span class="mj-closed-tag">Closed</span>
+                            {% endif %}
+                        </div>
+                        <div class="mj-meta-row">
+                            <span class="mj-location">{{ job.location }}</span>
+                            <span class="mj-dot">&middot;</span>
+                            <span class="mj-date">Posted {{ job.created_at|date:"M j, Y" }}</span>
+                        </div>
+                        <p class="mj-desc">{{ job.description|truncatechars:140 }}</p>
+                    </div>
+
+                    <div class="mj-stat">
+                        <span class="mj-stat-count">{{ job.total_candidates }}</span>
+                        <span class="mj-stat-label">canddiates</span>
+                    </div>
+
+                    <div class="mj-stat">
+                        <span class="mj-stat-count">{{ job.invited_candidates }}</span>
+                        <span class="mj-stat-label">invited</span>
+                    </div>
+
+                    <div class="mj-actions">
+                        <a href="{% url 'view_applicants' job.id %}" class="mj-btn mj-btn-primary">View candidates</a>
+                        <a href="{% url 'edit_job' job.id %}" class="mj-btn mj-btn-ghost">Edit</a>
+                        <a href="{% url 'delete_job' job.id %}" class="mj-btn mj-btn-danger">Delete</a>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+
+    {% else %}
+
+        <div class="mj-empty">
+            <div class="mj-empty-mark">＋</div>
+            <h3>No jobs posted yet</h3>
+            <p>Post your first job and start receiving ranked candidates.</p>
+            <a href="{% url 'post_job' %}" class="mj-btn-new">
+                <span class="mj-plus">+</span> Post a job
+            </a>
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

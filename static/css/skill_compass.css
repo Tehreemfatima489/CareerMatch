@@ -1,0 +1,226 @@
+/* =========================
+   BASE LAYOUT
+========================= */
+
+.compass-container {
+    padding: 40px;
+    background: #ffffff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.compass-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.compass-header h1 {
+    font-size: 34px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    color: #666;
+    font-size: 15px;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    text-align: center;
+    padding: 60px;
+    color: #777;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.compass-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.skill-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 20px;
+    transition: 0.25s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: #00a86b;
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.skill-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.priority-badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #f2f2f2;
+    color: #333;
+}
+
+/* Priority Colors */
+
+.high-priority .priority-badge {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.medium-priority .priority-badge {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.low-priority .priority-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+/* =========================
+   META INFO
+========================= */
+
+.skill-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.meta-item .label {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+.meta-item .value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #00a86b;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* =========================
+   REASON TEXT
+========================= */
+
+.reason {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.priority-section {
+    margin-bottom: 36px;
+}
+
+.section-heading {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.top-priority-card {
+    max-width: 420px;
+    border-width: 2px;
+    border-color: #00a86b;
+    box-shadow: 0 4px 14px rgba(0, 168, 107, 0.12);
+}
+
+.btn-complete {
+    margin-top: 14px;
+    width: 100%;
+    padding: 10px 16px;
+    background: #00a86b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-complete:hover {
+    background: #018a58;
+}
+
+.btn-complete-small {
+    margin-top: 12px;
+    width: 100%;
+    padding: 8px 12px;
+    background: #f3f4f6;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-complete-small:hover {
+    background: #00a86b;
+    color: white;
+}
+
+.alert-msg {
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.alert-msg.success { background: #d1fae5; color: #047857; }
+.alert-msg.error   { background: #fee2e2; color: #b91c1c; }

@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Skill Compass{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/skill_compass.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="compass-container">
+
+    <div class="compass-header">
+        <h1>Skill Compass</h1>
+        <p class="subtext">
+            Based on your matched jobs ({{ total_jobs }}), here are the skills that matter most.
+        </p>
+    </div>
+
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="alert-msg {{ msg.tags }}">{{ msg }}</div>
+        {% endfor %}
+    {% endif %}
+
+    {% if total_jobs == 0 %}
+        <div class="empty-state">
+            <h3>No Data Yet</h3>
+            <p>Start applying or getting matched with jobs to generate your skill insights.</p>
+        </div>
+    {% else %}
+
+        {% if top_priority %}
+        <div class="priority-section">
+            <h2 class="section-heading">Top Priority Skill</h2>
+
+            <div class="skill-card top-priority-card {{ top_priority.priority|slugify }}">
+
+                <div class="skill-top">
+                    <h2 class="skill-name">{{ top_priority.skill }}</h2>
+                    <span class="priority-badge">{{ top_priority.priority }}</span>
+                </div>
+
+                <div class="skill-meta">
+                    <div class="meta-item">
+                        <span class="label">Jobs Affected</span>
+                        <span class="value">{{ top_priority.jobs_affected }}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="label">Impact</span>
+                        <span class="value">{{ top_priority.impact_percent }}%</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ top_priority.impact_percent }}%"></div>
+                </div>
+
+                <p class="reason">{{ top_priority.reason }}</p>
+
+                <form method="POST" action="{% url 'mark_skill_complete' top_priority.skill %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-complete">Mark as Completed</button>
+                </form>
+
+            </div>
+        </div>
+        {% endif %}
+
+        {% if next_in_line %}
+        <div class="priority-section">
+            <h2 class="section-heading">Next in Line</h2>
+
+            <div class="compass-grid">
+                {% for item in next_in_line %}
+                <div class="skill-card {{ item.priority|slugify }}">
+
+                    <div class="skill-top">
+                        <h2 class="skill-name">{{ item.skill }}</h2>
+                        <span class="priority-badge">{{ item.priority }}</span>
+                    </div>
+
+                    <div class="skill-meta">
+                        <div class="meta-item">
+                            <span class="label">Jobs Affected</span>
+                            <span class="value">{{ item.jobs_affected }}</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">Impact</span>
+                            <span class="value">{{ item.impact_percent }}%</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {{ item.impact_percent }}%"></div>
+                    </div>
+
+                    <p class="reason">{{ item.reason }}</p>
+
+                    <form method="POST" action="{% url 'mark_skill_complete' item.skill %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-complete-small">Mark as Completed</button>
+                    </form>
+
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

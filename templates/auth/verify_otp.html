@@ -1,0 +1,39 @@
+{% extends "base_auth.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+{% block navbar %}
+<nav class="navbar">
+    <div class="logo"><span class="green">Career</span>Match</div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="login-card">
+    <h2>Verify Your Email</h2>
+    <p class="subtitle">We sent a 6-digit code to {{ email }}. Enter it below to verify your account.</p>
+
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="error">{{ msg }}</div>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST" action="{% url 'verify_otp' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="otp_code">Verification Code</label>
+            <input type="text" id="otp_code" name="otp_code" placeholder="Enter 6-digit code" maxlength="6" required>
+        </div>
+        <button type="submit" class="btn-login">Verify</button>
+    </form>
+
+    <p class="register-text">Didn't receive the code?</p>
+    <div class="register-links">
+        <a href="{% url 'resend_otp' %}">Resend Code</a>
+    </div>
+</div>
+{% endblock %}

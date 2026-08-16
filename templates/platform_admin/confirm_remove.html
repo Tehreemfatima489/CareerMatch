@@ -1,0 +1,24 @@
+{% extends "platform_admin/base_admin.html" %}
+
+{% block admin_content %}
+
+<div class="confirm-card">
+    <h3>Remove this {{ target_type }}?</h3>
+    <p>You're about to permanently remove <strong>{{ target_name }}</strong>. This cannot be undone.</p>
+
+    {% if target_type == "company" and job_count > 0 %}
+    <div class="confirm-warning">
+        This will also permanently delete {{ job_count }} job posting{{ job_count|pluralize }}, along with all associated candidate matches and invites.
+    </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="confirm-actions">
+            <button type="submit" class="btn-danger">Yes, Remove</button>
+            <a href="{% url cancel_url %}" class="btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
